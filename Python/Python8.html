@@ -1,0 +1,119 @@
+<button onclick="goBack()" class="button">Back</button>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <pre><code class="python">#Akshat Shah
+#IT 212
+
+#Creating class card
+class Card:
+    # __init__ method is called whenever a new card object is created.
+    #Defining the method init and assigning the variables
+    def __init__(self, the_rank, the_suit):
+        self.suit = the_suit
+        self.rank = the_rank
+
+    #Defining the rank method and assigning the ranks from lowest
+    #to highest number.   
+    def rank(self):
+        rank = ["", "", "2", "3", "4", "5", "6", "7", 
+        "8", "9", "10","11","12","13","14"]
+    #Definging the suit method and assigning the suits in alphabetical order
+    def suit(self):
+        suit = ["C","D","H","S"]
+
+    # Regular color method.
+    #Putting the coditions for the color method with if and else
+    def color(self):
+        if self.suit == "C":
+            return "black"
+        if self.suit == "S":
+            return "black"
+        elif self.suit=="D":
+            return "red"
+        elif self.suit=="H":
+            return "red"
+
+    # Define return value for str method.
+    def __str__(self):
+        symbols = ["", "", "2", "3", "4", "5", "6", "7", 
+        "8", "9", "10", "J", "Q", "K", "A"]
+        return symbols[self.rank] + self.suit
+
+***************************
+**********test1.py*********
+***************************
+#Importing card method from card file
+from card import Card
+
+#Test rank
+c1 = Card(11,"S")
+print(c1.rank)
+
+#Test suit
+c2 = Card(11,"S")
+print(c2.suit)
+
+#Test color method
+c3 = Card(11,"S")
+print(c3.color())
+
+#Test str
+c4 = Card(11,"S")
+print(str(c4))
+
+***************************
+**********test2.py*********
+***************************
+
+#Importing card method from card file
+from card import Card
+import unittest
+
+class MyUnitTestClass(unittest.TestCase):
+    
+    #Test rank instance variable
+    def test_1(self):
+        c = Card(11,"S")
+        self.assertEqual(c.rank,11)
+
+    #Test suit instance variable
+    def test_2(self):
+        c = Card(11,"S")
+        self.assertEqual(c.suit, "S")
+
+    #Test str method
+    def test_3(self):
+        c = Card(11,"S")
+        self.assertEqual(str(c), "JS")
+
+    #Test color method
+    def test_4(self):
+        c = Card(11,"S")
+        self.assertEqual(c.color(), "black")
+
+    #Test lt method
+    def test_5(self):
+        c = Card(11,"S")
+        c1 = Card(12, "S")
+        self.assertEqual(c.rank < c1.rank, True)
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+</code></pre>
+</body>
+
+

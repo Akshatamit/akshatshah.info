@@ -1,0 +1,186 @@
+/*Written by maitri shah*/
+.div2{padding-left:14%;}
+.topnav {
+  overflow: hidden;
+  background-color: rgb(20, 18, 18);
+}
+strong1:hover {color: cadetblue; }
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #000000;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+h1{font-family: 'Poiret One', cursive; font-size: 40px; text-align: center;}
+
+h1:hover {color: aqua;}
+
+h2{font-family: 'Poiret One', cursive}
+
+h3{font-family: 'Poiret One', cursive; font-size: 30px; text-align:center;}
+h3:hover{color: cadetblue;}
+
+h4{font-family: 'Poiret One', cursive; font-size: 25px; text-align:center;color:#52a4af;}
+h4:hover{color: cadetblue;}
+
+img{width: 100%; height: 100%;}
+.img2{width: 20%; height: 50%}
+
+/*Written by Akshat Shah*/
+img{
+    height: 430px;
+    width: 570px;
+    cursor: pointer
+}
+.img3{
+    height: 40px;
+    width: 40px;
+    cursor: pointer
+}
+.img5{
+    height: 350px;
+    width: 500px;
+    cursor: pointer
+}
+h2{
+ cursor: pointer
+}
+.box1{background-color: transparent; width:550px;height:600px;color:#000000;float: left;margin-left: 60px;padding: 10px;}
+.box2{background-color: transparent; width:550px;height:600px;color:#000000;float: left;padding: 10px; }
+.box3{background-color: transparent; width:550px;height:600px;color:#000000;float: left;padding: 10px;}
+.box4{background-color: transparent; width:550px;height:600px;color:#000000;float: left;padding: 10px;margin-left: 60px}
+.box5{background-color: transparent; width:400px;height:400px;color:#000000;float: left;padding: 10px;margin-left: 60px}
+.box6{background-color: transparent; width:400px;height:400px;color:#000000;float: left;padding: 10px;margin-left: 300px;}
+.button{
+  background-color: white;
+  border: ridge;
+  border-radius: 12px;
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 60px;
+  font-family:'Poiret One', cursive
+}
+.button1{
+  background-color: white;
+  border: ridge;
+  border-radius: 12px;
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 140px;
+  font-family: 'Poiret One', cursive;
+}
+.selectBox{border-radius:4px;border:1px solid #AAAAAA;}
+.textBox{border-radius:4px;border:1px solid #AAAAAA;}
+.Option{background-color: gray;font-family: 'Poiret One', cursive;}
+.price{
+  width: 40px;
+  height: 800px;
+  background-color: yellow;
+  border: solid black 1px;
+  padding: 5px;}
+body{background-color: gainsboro;background-repeat: no-repeat;background-size: cover;font-family: 'Poiret One', cursive; color: black; font-size: 20px}

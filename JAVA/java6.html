@@ -1,0 +1,631 @@
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+    <button onclick="goBack()" class="button" >Back</button>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+     <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <pre><code class="python">
+//Akshat Shah
+//IT 313
+
+
+/////////////////////////////////////////////////////////TRANSACTION.JAVA////////////////////////////////////////////////////////////////
+
+//Creating the package path
+package IT313.proj4.Shahakshat;
+
+//implementing the comparable interface
+public class    Transaction implements Comparable<Transaction>{
+
+    //Creating the variables
+    private int id = 0;
+    private String buyer;
+    private String seller;
+    private double amount = 0;
+    private String memo;
+    private String timestamp;
+
+    //creating the constructor
+    public Transaction(int id, String buyer, String seller, double amount, String memo, String timestamp) {
+        this.id = id;
+        this.buyer = buyer;
+        this.seller = seller;
+        this.amount = amount;
+        this.memo = memo;
+        this.timestamp = timestamp;
+    }
+
+        //Creating the get method, so that When I call the method it returns the value that I had set
+        public int getId () {
+            return id;
+        }
+
+        public String getSeller () {
+            return seller;
+        }
+
+        public String getBuyer () {
+            return buyer;
+        }
+
+        public double getAmount () {
+            return amount;
+        }
+
+        public String getMemo () {
+            return memo;
+        }
+
+        public String getTimestamp () {
+            return timestamp;
+        }
+
+
+        //overriding the string method to to customize it my way
+        @Override
+        public String toString () {
+            return "ID: " + this.getId() + ", " +
+                    "Buyer: " + this.getBuyer() + ", " +
+                    "Seller: " + this.getSeller() + ", " +
+                    "Amount: $" + this.getAmount() + ", " +
+                    "Memo: " + this.getMemo() + ", " +
+                    "Timestamp: " + this.getTimestamp();
+
+        }
+
+        //Creating the compare to and creating the if else conditions
+        @Override
+        public int compareTo (Transaction other){
+            //return (int)(this.id - other.id);
+            if (this.id > other.id) {
+                return 1;
+            }
+             else if (this.id == other.id){
+                return 0;
+            }
+            else {
+                return -1;
+            }
+        }
+
+}
+
+/////////////////////////////////////////////////////////MOBILE-TRANSACTION.JAVA/////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+
+//Creating the package path
+package IT313.proj4.Shahakshat;
+
+//Using inheritance to extend the transaction class with this class
+public class MobileTransaction extends Transaction {
+
+    //Declaring the strings
+    public String storage;
+    public String memory;
+
+
+    //Creating the constructor
+    public MobileTransaction(int id, String buyer, String seller, double amount,String storage, String memory, String memo, String timestamp) {
+        super(id, buyer, seller, amount, memo, timestamp);
+        this.memory = memory;
+        this.storage = storage;
+    }
+
+    //Creating the get methods
+    public String getMemory() {
+        return memory;
+    }
+
+    public String getStorage() {
+        return storage;
+    }
+
+    //overriding the string method to to customize it my way
+    @Override
+    public String toString() {
+        return "ID: " + this.getId() + ", " +
+                "Buyer: " + this.getBuyer() + ", " +
+                "Seller: " + this.getSeller() + ", " +
+                "Amount: $" + this.getAmount() + ", " +
+                "Memo: " + this.getMemo() + ", " +
+                "Storage: " + this.getStorage() + ", " +
+                "Memory: " + this.getMemory() + ", " +
+                "Timestamp: " + this.getTimestamp();
+    }
+}
+
+/////////////////////////////////////////////////////////TV-TRANSACTION.JAVA/////////////////////////////////////////////////////////////
+//Akshat Shah
+//IT 313
+
+package IT313.proj4.Shahakshat;
+public class TvTransaction extends Transaction {
+
+    public int screensize;
+    public String resolution;
+
+
+    public TvTransaction(int id, String buyer, String seller, double amount, int screensize, String resolution, String memo, String timestamp) {
+        super(id, buyer, seller, amount, memo, timestamp);
+        this.screensize = screensize;
+        this.resolution = resolution;
+    }
+
+    public int getScreensize(){
+        return screensize;
+    }
+
+    public String getResolution(){
+        return resolution;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.getId() + ", " +
+                "Buyer: " + this.getBuyer() + ", " +
+                "Seller: " + this.getSeller() + ", " +
+                "Amount: $" + this.getAmount() + ", " +
+                "Memo: " + this.getMemo() + ", " +
+                "Screen Size: " + this.getScreensize() + ", " +
+                "Resolution: " + this.getResolution() + ", " +
+                "Timestamp: " + this.getTimestamp();
+    }
+}
+/////////////////////////////////////////////////////////TEST1.JAVA/////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+
+//Importing all the classes
+import IT313.proj4.Shahakshat.MobileTransaction;
+import IT313.proj4.Shahakshat.Transaction;
+import IT313.proj4.Shahakshat.TvTransaction;
+
+public class Test1 {
+    public static void main(String[] args) {
+
+        /////Testing the base class/////
+        System.out.println("/////////////");
+        System.out.println("TRANSACTION 1");
+        System.out.println("/////////////");
+        Transaction t1 = new Transaction(01,"Akshat","Google", 3500,
+                        "My first transaction", "10/29/2019 12.30.00");
+        System.out.println(t1);
+        System.out.println(t1.getId());
+        System.out.println(t1.getBuyer());
+        System.out.println(t1.getSeller());
+        System.out.println(t1.getAmount());
+        System.out.println(t1.getMemo());
+        System.out.println(t1.getTimestamp());
+        /////Testing the base class/////
+
+
+
+
+        /////Testing the base class/////
+        System.out.println("\r\n" + "/////////////"+ "\n" + "TRANSACTION 2");
+        System.out.println("/////////////");
+        Transaction t2 = new Transaction(02,"Akshat","Google", 390,
+                "My second transaction", "10/29/2019 12.38.00");
+        System.out.println(t2);
+        System.out.println(t2.getId());
+        System.out.println(t2.getBuyer());
+        System.out.println(t2.getSeller());
+        System.out.println(t2.getAmount());
+        System.out.println(t2.getMemo());
+        System.out.println(t2.getTimestamp());
+        /////Testing the base class/////
+
+
+
+        /////Testing the 1st derived class/////
+        System.out.println("\r\n" +"/////////////"+ "\n" + "TRANSACTION 3");
+        System.out.println("/////////////");
+        TvTransaction t3 = new TvTransaction(03,"Akshat","Samsung", 1500,
+                65, "4k", "My third transaction", "10/29/2019 2.38.00");
+        System.out.println(t3);
+        System.out.println(t3.getId());
+        System.out.println(t3.getBuyer());
+        System.out.println(t3.getSeller());
+        System.out.println(t3.getAmount());
+        System.out.println(t3.getScreensize());
+        System.out.println(t3.getResolution());
+        System.out.println(t3.getMemo());
+        System.out.println(t3.getTimestamp());
+        /////Testing the first derived class/////
+
+
+
+
+        /////Testing the first derived class/////
+        System.out.println("\r\n" +"/////////////"+ "\n" + "TRANSACTION 4");
+        System.out.println("/////////////");
+        TvTransaction t4 = new TvTransaction(04,"Akshat","LG", 3500,
+                65, "4k OLED", "My fourth transaction", "10/30/2019 12.38.00");
+        System.out.println(t4);
+        System.out.println(t4.getId());
+        System.out.println(t4.getBuyer());
+        System.out.println(t4.getSeller());
+        System.out.println(t4.getAmount());
+        System.out.println(t4.getScreensize());
+        System.out.println(t4.getResolution());
+        System.out.println(t4.getMemo());
+        System.out.println(t4.getTimestamp());
+        /////Testing the 1st derived class/////
+
+
+
+
+        /////Testing the second derived class/////
+        System.out.println("\r\n" +"/////////////"+ "\n" + "TRANSACTION 5");
+        System.out.println("/////////////");
+        MobileTransaction t5 = new MobileTransaction(05,"Akshat","LG", 350,
+                "64GB", "2GB", "My fifth transaction", "10/30/2019 12.38.00");
+        System.out.println(t5);
+        System.out.println(t5.getId());
+        System.out.println(t5.getBuyer());
+        System.out.println(t5.getSeller());
+        System.out.println(t5.getAmount());
+        System.out.println(t5.getStorage());
+        System.out.println(t5.getMemory());
+        System.out.println(t5.getMemo());
+        System.out.println(t5.getTimestamp());
+        /////Testing the second derived class/////
+
+
+
+
+        /////Testing the second derived class/////
+        System.out.println("\r\n" +"/////////////"+ "\n" + "TRANSACTION 6");
+        System.out.println("/////////////");
+        MobileTransaction t6 = new MobileTransaction(06,"Akshat","OnePlus", 350,
+                "256GB", "12GB", "My sixth transaction", "10/30/2019 12.38.00");
+        System.out.println(t6);
+        System.out.println(t6.getId());
+        System.out.println(t6.getBuyer());
+        System.out.println(t6.getSeller());
+        System.out.println(t6.getAmount());
+        System.out.println(t6.getStorage());
+        System.out.println(t6.getMemory());
+        System.out.println(t6.getMemo());
+        System.out.println(t6.getTimestamp());
+        /////Testing the second derived class/////
+
+
+
+        //Return -1
+        System.out.println("Comparison for less than:" + t1.compareTo(t2));
+
+        //Return 0
+        System.out.println("Comparison for equals to:" + t1.compareTo(t1));
+
+        //Return 1
+        System.out.println("Comparison for greater than:" + t2.compareTo(t1));
+
+    }
+}
+
+/////////////////////////////////////////////////////////TEST2.JAVA/////////////////////////////////////////////////////////////
+//Akshat Shah
+//IT 313
+
+//This import tool allows me to run each test and imports the junit
+import org.junit.jupiter.api.Test;
+
+//Imports the assertions
+import static org.junit.jupiter.api.Assertions.*;
+
+//Importing all the classes
+import IT313.proj4.Shahakshat.MobileTransaction;
+import IT313.proj4.Shahakshat.Transaction;
+import IT313.proj4.Shahakshat.TvTransaction;
+
+
+public class Test2 {
+
+    ////Test1(BASE CLASS)///
+    Transaction t1 = new Transaction(01,"Akshat","Google", 3500,
+            "My first transaction", "10/29/2019 12.30.00");
+    @Test
+    public void TestToString(){
+        assertEquals("ID: 1, Buyer: Akshat, Seller: Google, Amount: $3500.0, Memo: My first transaction, Timestamp: 10/29/2019 12.30.00"
+                , t1.toString()); }
+
+    @Test
+    public void TestId() {
+        assertEquals(1, t1.getId());
+    }
+
+    @Test
+    public void TestBuyer(){
+        assertEquals("Akshat", t1.getBuyer());
+    }
+
+    @Test
+    public void TestSeller() {
+        assertEquals("Google", t1.getSeller());
+    }
+
+    @Test
+    public void TestAmount() {
+        assertEquals(3500, t1.getAmount());
+    }
+
+    @Test
+    public void TestMemo() {
+        assertEquals("My first transaction", t1.getMemo());
+    }
+
+    @Test
+    public void TestTimeStamp() {
+        assertEquals("10/29/2019 12.30.00", t1.getTimestamp());
+    }
+    ////Test1(BASE CLASS)///
+
+
+
+
+    ////Test2(BASE CLASS)////
+    Transaction t2 = new Transaction(02,"Akshat","Google", 3500,
+            "My second transaction", "10/29/2019 12.38.00");
+
+    @Test
+    public void TestToString1(){
+        assertEquals("ID: 2, Buyer: Akshat, Seller: Google, Amount: $3500.0, Memo: My second transaction, Timestamp: 10/29/2019 12.38.00"
+                , t2.toString()); }
+
+    @Test
+    public void TestId2() {
+        assertEquals(2, t2.getId());
+    }
+
+    @Test
+    public void TestBuyer2() {
+        assertEquals("Akshat", t2.getBuyer());
+    }
+
+    @Test
+    public void TestSeller2() {
+        assertEquals("Google", t2.getSeller());
+    }
+
+    @Test
+    public void TestAmount2() {
+        assertEquals(3500.0, t2.getAmount());
+    }
+
+    @Test
+    public void TestMemo2() {
+        assertEquals("My second transaction", t2.getMemo());
+    }
+
+    @Test
+    public void TestTimeStamp2() {
+        assertEquals("10/29/2019 12.38.00", t2.getTimestamp());
+    }
+    ////Test 2(BASE CLASS)////
+
+
+
+
+    ////Test 3(DERIVED CLASS)////
+    TvTransaction t3 = new TvTransaction(03,"Akshat","Samsung", 1500,
+            65, "4k", "My third transaction", "10/29/2019 2.38.00");
+
+    @Test
+    public void TestToString3(){
+        assertEquals("ID: 3, Buyer: Akshat, Seller: Samsung, Amount: $1500.0, Memo: My third transaction, " +
+                        "Screen Size: 65, Resolution: 4k, Timestamp: 10/29/2019 2.38.00", t3.toString()); }
+
+    @Test
+    public void TestId3() { assertEquals(3, t3.getId()); }
+
+    @Test
+    public void TestBuyer3() {
+        assertEquals("Akshat", t3.getBuyer());
+    }
+
+    @Test
+    public void TestSeller3() {
+        assertEquals("Samsung", t3.getSeller());
+    }
+
+    @Test
+    public void TestAmount3() {
+        assertEquals(1500, t3.getAmount());
+    }
+
+    @Test
+    public void TestScreenSize3(){
+        assertEquals(65, t3.getScreensize());
+    }
+
+    @Test
+    public void TestResolution3(){
+        assertEquals("4k",t3.getResolution());
+    }
+    @Test
+    public void TestMemo3() {
+        assertEquals("My third transaction", t3.getMemo());
+    }
+
+    @Test
+    public void TestTimeStamp3() {
+        assertEquals("10/29/2019 2.38.00", t3.getTimestamp());
+    }
+    ////Test 3(DERIVED CLASS)////
+
+
+
+    ////TEST 4(DERIVED CLASS)////
+    TvTransaction t4 = new TvTransaction(04,"Akshat","LG", 3500,
+            65, "4k OLED", "My fourth transaction", "10/30/2019 12.38.00");
+    @Test
+    public void TestToString4() {
+        assertEquals(
+                "ID: 4, Buyer: Akshat, Seller: LG, Amount: $3500.0, Memo: My fourth transaction, " +
+                        "Screen Size: 65, Resolution: 4k OLED, Timestamp: 10/30/2019 12.38.00", t4.toString()); }
+    @Test
+    public void TestId4() {
+        assertEquals(4, t4.getId()); }
+
+    @Test
+    public void TestBuyer4() {
+        assertEquals("Akshat", t4.getBuyer());
+    }
+
+    @Test
+    public void TestSeller4() {
+        assertEquals("LG", t4.getSeller());
+    }
+
+    @Test
+    public void TestAmount4() {
+        assertEquals(3500, t4.getAmount());
+    }
+
+    @Test
+    public void TestScreenSize4(){
+        assertEquals(65, t4.getScreensize());
+    }
+
+    @Test
+    public void TestResolution4(){
+        assertEquals("4k OLED",t4.getResolution());
+    }
+
+    @Test
+    public void TestMemo4() {
+        assertEquals("My fourth transaction", t4.getMemo());
+    }
+
+    @Test
+    public void TestTimeStamp4() {
+        assertEquals("10/30/2019 12.38.00", t4.getTimestamp());
+    }
+    ////TEST 4(DERIVED CLASS)////
+
+
+
+    ////TEST 5(DERIVED CLASS)
+    MobileTransaction t5 = new MobileTransaction(05,"Akshat","LG", 350,
+            "64GB", "2GB", "My fifth transaction", "10/30/2019 12.38.00");
+
+    @Test
+    public void TestToString5() {
+        assertEquals("ID: 5, Buyer: Akshat, Seller: LG, Amount: $350.0, Memo: My fifth transaction, " +
+                "Storage: 64GB, Memory: 2GB, Timestamp: 10/30/2019 12.38.00",t5.toString()); }
+
+    @Test
+    public void TestId5() {
+        assertEquals(5, t5.getId()); }
+
+    @Test
+    public void TestBuyer5() {
+        assertEquals("Akshat", t5.getBuyer());
+    }
+
+    @Test
+    public void TestSeller5() {
+        assertEquals("LG", t5.getSeller());
+    }
+
+    @Test
+    public void TestAmount5() {
+        assertEquals(350, t5.getAmount());
+    }
+
+    @Test
+    public void TestStorage5(){assertEquals("64GB", t5.getStorage());}
+
+    @Test
+    public void TestMemory5(){assertEquals("2GB", t5.getMemory());}
+
+    @Test
+    public void TestMemo5() { assertEquals("My fifth transaction", t5.getMemo()); }
+
+    @Test
+    public void TestTimeStamp5() { assertEquals("10/30/2019 12.38.00", t5.getTimestamp()); }
+    ////Test 5(DERIVED CLASS)////
+
+
+
+
+    ////Test 6(DERIVED CLASS)////
+    MobileTransaction t6 = new MobileTransaction(06,"Akshat","OnePlus", 350,
+            "256GB", "12GB", "My sixth transaction", "10/30/2019 12.38.00");
+
+    @Test
+    public void TestToString6() { assertEquals("ID: 6, Buyer: Akshat, Seller: OnePlus, Amount: $350.0, " +
+            "Memo: My sixth transaction, Storage: 256GB, Memory: 12GB, Timestamp: 10/30/2019 12.38.00",t6.toString()); }
+    @Test
+    public void TestId6() { assertEquals(6, t6.getId()); }
+
+    @Test
+    public void TestBuyer6() {
+        assertEquals("Akshat", t6.getBuyer());
+    }
+
+    @Test
+    public void TestSeller6() {
+        assertEquals("OnePlus", t6.getSeller());
+    }
+
+    @Test
+    public void TestAmount6() {
+        assertEquals(350, t6.getAmount());
+    }
+
+    @Test
+    public void TestStorage6(){assertEquals("256GB", t6.getStorage());}
+
+    @Test
+    public void TestMemory6(){assertEquals("12GB", t6.getMemory());}
+
+    @Test
+    public void TestMemo6() { assertEquals("My sixth transaction", t6.getMemo()); }
+
+    @Test
+    public void TestTimeStamp6() { assertEquals("10/30/2019 12.38.00", t5.getTimestamp()); }
+    ////Test 6(DERIVED CLASS)////
+
+
+    /////Testing the comparable method/////
+    //Return -1
+    @Test
+    public void TestComparableMethod1(){
+        assertEquals(-1, t1.compareTo(t2));
+    }
+
+    //Return 0
+    @Test
+    public void TestComparableMethod2(){
+        assertEquals(0, t1.compareTo(t1));
+    }
+
+    //Return 1
+    @Test
+    public void TestComparableMethod3(){
+        assertEquals(1, t2.compareTo(t1));
+    }
+
+
+}
+
+
+</code></pre>
+</body>

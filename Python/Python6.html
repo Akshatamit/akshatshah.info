@@ -1,0 +1,65 @@
+<button onclick="goBack()" class="button">Back</button>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <pre><code class="python">#Akshat shah
+#It 211
+
+#Project 6
+
+#Import the modules
+import os
+import shutil
+
+#Assign previous_album to the empty string ("")
+previous_album = " "
+
+#Open the input file
+fin = open("Index.txt","r")
+
+line = fin.readline( )
+
+while line != "":
+    fields = line.split(",")
+    name = line.strip( )
+    folder_name = fields[0].strip()
+    original_photo_name = fields[1].strip()
+    if previous_album != folder_name:
+#Method to create new folder
+        os.mkdir(folder_name)
+        print(" Creating " + folder_name + " Folder " )
+#Intializing the counter to 1
+        count = 1
+        previous_album = folder_name
+
+#Next two lines are literal python statements
+    new_photo_name = "{:s}/{:03d}-{:s}".\
+        format(folder_name, count, original_photo_name)
+    shutil.copyfile("Originals/" + original_photo_name,new_photo_name)
+    print(" Putting the " + original_photo_name + " in " + folder_name + " folder")
+    count = count + 1
+    
+    line = fin.readline()
+
+fin.close()  
+
+
+#INPUT FILE(Index.txt)
+<a href="#" onclick="window.open('Index.txt', '_blank');">Index.txt</a>
+
+         
+</code></pre>
+</body>
+
+

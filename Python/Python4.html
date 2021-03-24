@@ -1,0 +1,101 @@
+<button onclick="goBack()" class="button">Back</button>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <pre><code class="python">#Akshat shah
+#It 211
+#project 4
+#Letter P
+
+#Open output file
+fout = open("P.txt", "w")
+
+#Draw top bar
+for y in range(0,3):
+    for x in range(0,20):
+        fout.write("*")
+    fout.write("\n")
+
+#Draw side bars
+for y in range(0, 8):
+    for x in range(0, 6):
+        fout.write("*")
+    for x in range(0, 8):
+        fout.write(" ")
+    for x in range(0, 6):
+        fout.write("*")
+    fout.write("\n")
+
+#Draw center bar
+for y in range(0, 3):
+    for x in range(0, 20):
+        fout.write("*")
+    fout.write("\n")
+
+#Draw bottom bar
+for y in range(0, 10):
+    for x in range(0, 6):
+        fout.write("*")
+    fout.write("\n")
+
+#Close output file.
+fout.close( )
+
+#Akshat shah
+#It 211
+#project 4
+#Letter V
+
+# Open output file
+fout = open("v.txt", "w")
+
+#Draw diagonal bars 1 & 2
+for y in range(0, 13):
+    
+#Draw the left bar
+    for x in range(0, + y):
+        fout.write(" ")
+    for x in range(0, 7):
+        fout.write("*")
+        
+#Draw the right bar
+    for x in range(0, 13 - y):
+        fout.write("  ")
+    for x in range(0, 7 ):
+        fout.write("*")
+    fout.write("\n")
+
+#Draw  bottom bar 1
+for y in range(0,1):
+    for x in range(0,13):
+        fout.write(" ")
+    for x in range(0,14):
+        fout.write("*")
+    fout.write("\n")
+
+#Draw bottom bar 2
+for y in range(0,1):
+    for x in range(0,14):
+        fout.write(" ")
+    for x in range(0,12):
+        fout.write("*")
+    fout.write("\n")
+    
+# Close output file
+fout.close( )
+
+</code></pre>
+</body>
+
+

@@ -1,0 +1,115 @@
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<head>
+    <button onclick="goBack()" class="button" >Back</button>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+     <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <pre><code class="python">
+
+//Akshat Shah
+//IT 313
+//Project 4
+
+//Import statements
+import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+//public Class
+public class Main {
+
+    //static String method
+    public static String getBarCode(String zipcode) {
+        //chars as character
+        String chars = "-1234567890";
+        //Array for the zipcode bar
+        String[] codes = {" ", ":::||", "::|:|", "::||:", ":|::|", ":|:|:", ":||::", "|:::|", "|::|:", "|:|::", "||:::"};
+
+        //Declaring code as string
+        String code;
+
+        //intializing the variable to 0
+        int sum = 0;
+        int checksum ;
+
+        //Intializing return value to empty string
+        String retVal = "";
+        String outPut = "";
+
+        // Creating the for loop for getting the values from the output file and converting it to the bar code
+            for (int i = 0; i < zipcode.length(); i++) {
+                char c = zipcode.charAt(i);
+                sum += Character.getNumericValue(c);
+                int index = chars.indexOf(c);
+                code = codes[index];
+                retVal += code;
+                //For getting the sum of the zipcode
+                checksum = (10 - sum % 10) % 10;
+                //For getting the sum to convert it into the codes
+                outPut = codes[checksum];
+            }
+            //Return statements
+            return "|" + retVal + outPut + "|";
+    }
+
+// Source code file Main.java
+    public static void main(String[] args) throws FileNotFoundException {
+
+        // Open file containing names with FileChooser dialog
+        JFileChooser chooser = new JFileChooser();
+
+        chooser.showOpenDialog(null);
+
+        File fileObj = chooser.getSelectedFile();
+
+        /// Read names and write greetings, each in its own file.
+        Scanner in = new Scanner(fileObj);
+
+        //Create a new file to print the output
+        PrintWriter pw = new PrintWriter("labels.txt");
+
+        //While loop for reading the file and assigning the fields
+        while (in.hasNextLine( )) {
+            String line = in.nextLine();
+            String[] fields = line.split("," ) ;
+            String name = fields[0];
+            String address = fields[1];
+            String city = fields[2];
+            String state = fields[3];
+            String zipCode = fields[4];
+
+            //Print statement for the output file
+            pw.println(name + "\n" + address + "\n" + city + "\n" + state +  "\n" + zipCode );
+            pw.println(Main.getBarCode(zipCode)  + "\n");
+
+            //Just for Testing(Not Necessary)
+            System.out.println(name + "\n" + address + "\n" + city + "\n" + state +  "\n" + zipCode);
+            System.out.println( Main.getBarCode(zipCode) +"\n");
+        }
+        //Closing the scanner and the printer
+        pw.close();
+        in.close();
+    }
+}  
+#INPUT FILE
+<a href="#" onclick="window.open('addresses.txt', '_blank');">Addresses.txt</a>
+
+#OUTPUT FILE
+<a href="#" onclick="window.open('labels.txt', '_blank');">Labels.txt</a>
+
+</code></pre>
+</body>

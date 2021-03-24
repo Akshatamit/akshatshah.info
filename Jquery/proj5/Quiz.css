@@ -1,0 +1,42 @@
+h1{font-family: comic sans ms; text-align: center}
+body{background-image:url("https://images.pexels.com/photos/551611/pexels-photo-551611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");background-repeat: no-repeat;background-size: cover;color: #000000; font-family: cursive }
+.button {
+  padding: 10px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #999;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+}
+.button1{
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #999;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+  margin-left: 580px;
+  width: 60px;
+  height: 20px;
+}
+.button:hover {background-color: #c4c4c4}
+
+.button:active {
+  background-color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button1:hover {background-color: #c4c4c4}
+
+.button1:active {
+  background-color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
