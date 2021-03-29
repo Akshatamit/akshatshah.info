@@ -1,8 +1,0 @@
-ChicagoGarden,CrystalGarden.jpg
-ChicagoTilt,JohnHancockTower.jpg
-ChicagoTourism,Navypier.jpg
-ChicagoTourism,SheddAquarium.jpg
-ChicagoBuilding,94thFloor.jpg
-ChicagoBuilding,Skyline.jpg
-ChicagoBuilding,Topview.jpg
-ChicagoBuilding,WillisTower.jpg
