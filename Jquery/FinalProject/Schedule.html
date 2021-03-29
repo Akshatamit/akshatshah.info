@@ -1,0 +1,76 @@
+<!--Written by Maitri Shah-->
+<html>
+<title>Final Project</title>
+<head>
+    <meta charset="UTF-8">
+    <h3>Welcome to Shah Electronics</h3>
+    <h4>Where Quality matters</h4>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="Schedule.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="Schedule.css" type="text/css">  
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">   
+  
+<!-----Navigation bar----------->
+<div class="topnav" id="myTopnav">
+   <a href="Cover.html" class="active">Home</a>
+   <a href="Buy.html">Buy</a>
+   <a href="BuyPhone.html">Phone</a>
+<div class="dropdown">
+    <button class="dropbtn">About   
+    </button>      
+<div class="dropdown-content">
+    <a href="Schedule.html">Schedule</a>
+    <a href="contact.html">Contact</a>
+    <a href="summary.html">Summary</a>      
+</div>
+</div>   
+</div>
+</head>
+<body>
+  
+    <br>  
+    <p class="p2" id="phone" style="cursor:pointer"><img src="s105g.jpg" style="width: 100%; height: 90%;"></p>
+    <p style="margin-left: 90px"><video src="Samsung%20Galaxy_%20The%20Future.mp4" id="imgvideo" style="height: 300px; width: 400px;" controls></video></p>
+    <br>
+    <br>
+<div class="container"> 
+<div id="second">
+    <p>Welcome, here you can RSVP for upcoming Exciting Samsung Events. Please enter the event name choose the date below.</p>
+    <h1>Event Info:</h1>
+    <p>Samsung S10 5g Launch - Friday, April 5(7:00PM)</p>
+    <p>No Noise - Mon, Mar 18(6:30PM)</p>
+    <p>Samsung Qled Tv series Launch(8:00PM)</p>
+    <p>Galaxy Wellness Session - Fri, March 22 (7:00PM)</p>
+    <p>Make with Alicia Ward - Sun,March 24(2:00PM)</p>
+</div>
+    <img src="resize_b5cdc036-9d96-4ed4-9e67-e66e76c9dce9.jpg"><a href="contact.html"><br><p>No Noise event</p></a><br>
+    <img src="2.jpg"><a href="contact.html"><br><p>Galaxy Wellness Session</p></a><br>
+    <img src="3.jpg"><a href="contact.html"><br><p>Make with Alicia Ward</p></a><br>
+    <p class="Cover"></p>
+    <p class="schedule">
+        <label for="eType"><h1>Event Type:</h1></label>
+    </p>
+    <input id="eType" />
+<div>
+<div class="div2">
+    <span class="notable"><h1>Select Date</h1><span class="note">Click on the input box for the calender</span></span>
+    <input type="text" id="date" class="input2">
+</div>
+<p><input type="button" value="Schedule" id="sButton" class="button" /></p>
+<p id="display"></p>
+</div>
+<hr>
+<hr>      
+</div>    
+</body>
+</html>
