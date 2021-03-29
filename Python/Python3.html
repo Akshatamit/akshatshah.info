@@ -1,0 +1,86 @@
+<button onclick="goBack()" style="background-color: black; border: none; color: white;padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px; margin-left: -10px; cursor:pointer;">Back</button>
+     <script>
+     function goBack() {
+       window.history.back();
+     }
+     </script>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <pre><code class="python">#Akshat shah
+#Project 3
+
+#prompt to allow the user to enter their first and last name
+desired_first_name = input("Enter first name:")
+desired_last_name = input("Enter last name:")
+
+#intializing the credit hours and grade points
+total_credit_hours = 0
+total_grade_points = 0.0
+
+#open the input file","r")
+fin = open("grade-records.txt", "r")
+
+#read and throw away first line
+fin.readline()
+
+#read first line.
+line = fin.readline()
+
+while line != "":
+   #extract fields from line
+    fields = line.split(",")
+    
+   #assign variables
+    last_name = fields[1].strip()
+    first_name = fields[2].strip()
+    credit_hours = int(fields[6].strip())
+    grade = fields[7].strip()
+    
+    if first_name == desired_first_name and last_name == desired_last_name:
+        
+        if grade == "A":
+           grade_points = credit_hours * 4
+
+        elif grade == "B":
+           grade_points = credit_hours * 3
+
+        elif grade == "C":
+           grade_points = credit_hours * 2
+
+        elif grade == "D":
+           grade_points = credit_hours * 1
+          
+        else:
+           grade_points =  0
+           
+        total_credit_hours = total_credit_hours + credit_hours
+           
+        total_grade_points = total_grade_points + grade_points
+    #To read the input file
+    line = fin.readline()
+#closing the input file
+fin.close()
+
+#equation to calculate the gpa
+gpa = total_grade_points / total_credit_hours
+
+#print statement, also rounds the gpa to two decimal places
+print(f"GPA for {desired_first_name} {desired_last_name} is {round(gpa, 2)}.")
+
+#INPUT FILE(grade-records.txt)
+<a href="#" onclick="window.open('grade-records.txt', '_blank');">grade-records.txt</a>
+
+</code></pre>
+</body>
+

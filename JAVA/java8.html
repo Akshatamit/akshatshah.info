@@ -1,0 +1,364 @@
+<button onclick="goBack()" style="background-color: black; border: none; color: white;padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px; margin-left: -10px; cursor:pointer;">Back</button>
+     <script>
+     function goBack() {
+       window.history.back();
+     }
+     </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+     <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <pre><code class="python">
+/////////////////////////////
+////////DELIVRABLES//////////
+/////////////////////////////
+
+/////////////////////////////////////////////////////////TRANSACTION.JAVA/////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+
+//Importing the serializable interface
+import java.io.Serializable;
+
+//Implementing the serlizable interface
+public class Transaction implements Serializable {
+
+    //Creating the variables
+    private int id = 0;
+    private String buyer;
+    private String seller;
+    private double amount = 0;
+    private String timestamp;
+
+    //creating the constructor
+    public Transaction(int id, String buyer, String seller, double amount, String timestamp) {
+        this.id = id;
+        this.buyer = buyer;
+        this.seller = seller;
+        this.amount = amount;
+        this.timestamp = timestamp;
+    }
+
+    //Creating the get method, so that When I call the method it returns the value that I had set
+    public int getId () {
+        return id;
+    }
+
+    public String getSeller () {
+        return seller;
+    }
+
+    public String getBuyer () {
+        return buyer;
+    }
+
+    public double getAmount () {
+        return amount;
+    }
+
+    public String getTimestamp () {
+        return timestamp;
+    }
+
+
+    //overriding the string method to to customize it my way
+    @Override
+    public String toString () {
+        return "ID: " + this.getId() + ", " +
+                "Buyer: " + this.getBuyer() + ", " +
+                "Seller: " + this.getSeller() + ", " +
+                "Amount: $" + this.getAmount() + ", " +
+                "Timestamp: " + this.getTimestamp();
+
+    }
+
+
+}
+
+/////////////////////////////////////////////////////////TRANSACTIONCHECKER.JAVA/////////////////////////////////////////////////////////
+//Akshat Shah
+//IT 313
+// Source Code file: TransactionChecker.java
+
+//Import statements
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.ObjectStreamException;
+import java.util.Observable;
+import java.util.Scanner;
+
+//this class extends the functionality  of the observable class
+public class TransactionChecker extends Observable {
+    Scanner inputScanner;
+
+    //Creating a new scanner object
+    public TransactionChecker(String fileName)
+            throws FileNotFoundException {
+        inputScanner = new Scanner(new File(fileName));
+    }
+
+    public void checkTransactions( ) {
+
+        // Throw away first line
+        inputScanner.nextLine( );
+
+        //While loop so it can look for all the search strings from the output file
+
+        //Declaring the ID
+        int i = 1001;
+
+        //Reading from the output file
+        while(inputScanner.hasNextLine( )) {
+            String line = inputScanner.nextLine( );
+            String[ ] fields = line.split(",");
+            //System.out.printf("%s %s %.2f %s\n",
+                //    fields[0], fields[1],
+                  //      Double.parseDouble(fields[2]), fields[3]);
+
+            //Creating the transaction object
+            Transaction t = new Transaction(i , fields[0],fields[1],Double.parseDouble(fields[2]),fields[3]);
+
+
+
+            //Creating an if condition to search for eugene eko and amount for over 50000
+            //EqualsIgnoreCase compares two string and if it matches it returns the value and notify the observers.
+            if(t.getBuyer().equalsIgnoreCase("Eugene Eko") && t.getAmount()>50000){
+                setChanged();
+                notifyObservers(t);
+                i ++;
+            }
+
+        }
+        //closing the scanner
+        inputScanner.close( );
+
+    }
+}
+
+/////////////////////////////////////////////////////////TRANSACTIONLOGGER.JAVA//////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+// Source code file TransactionLogger.java
+
+//Import statements
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Observable;
+import java.util.Observer;
+
+//Implemeting the observer interface
+public class TransactionLogger  implements Observer {
+    PrintWriter log;
+
+    //Creating a new file to print the results
+    public TransactionLogger(String fileName)
+            throws FileNotFoundException {
+        log = new PrintWriter(fileName);
+    }
+
+    //Closing the log
+    public void close( ) {
+        log.close( );
+    }
+
+    //Update method to override the method from the base class
+    @Override
+    public void update(Observable obs, Object info) {
+        log.println(info.toString());
+
+        //Forces the info to be written on the disk
+        log.flush();
+
+    }
+}
+
+/////////////////////////////////////////////////////////TESTTRANSACTIONCHECKER.JAVA/////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+
+//Making excepetion for file error
+import java.io.FileNotFoundException;
+
+//Testing the transaction checker file
+public class TestTransactionChecker {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        //Scanning the new file
+        TransactionChecker tc = new TransactionChecker("deliverables/src/transactions.txt");
+
+        //Creating the new file
+        TransactionLogger tc1 = new TransactionLogger("deliverables/src/logger.txt");
+
+        //Adding the TransactionLogger object as an observer to the TransactionChecker object.
+        tc.addObserver(tc1);
+
+        //Calling the checkTransactions method of the TransactionChecker object.
+        tc.checkTransactions();
+
+        //closing the Transaction logger object
+        tc1.close();
+    }
+
+}
+
+
+#INPUT FILE
+<a href="#" onclick="window.open('transactions.txt', '_blank');">Transactions.txt</a>
+
+#OUTPUT FILE
+<a href="#" onclick="window.open('logger.txt', '_blank');">Logger.txt</a>
+
+/////////////////////////////
+////////OBSERVER/////////////
+/////////////////////////////
+
+
+/////////////////////////////////////////////////////////OBSERVABLE.JAVA/////////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+// Project: Observer
+// Module: observer
+// Package: it313.util.util
+// Source code file: Observable.java
+
+//This class represents an observable object, or "data" in the
+//model-view paradigm. It can be subclassed to represent an
+//object that the application wants to have observed.
+//An observable object can have one or more observers.
+//An observer may be any object that implements interface
+//it313.util.Observer. After an observable instance changes, an application
+//calling the it313.util.Observable's notifyObservers method causes all of
+//its observers to be notified of the change by a call to their
+//update method.
+
+//The order in which notifications will be delivered is unspecified.
+//The default implementation provided in the it313.util.util.Observable class will
+//notify Observers in the order in which they registered interest,
+//but subclasses may change this order, use no guaranteed order,
+//deliver notifications on separate threads, or may guarantee that
+//their subclass follows this order, as they choose.
+
+//Note that this notification mechanism has nothing to do with
+//threads and is completely separate from the wait and notify mechanism
+//of class Object.
+
+//When an observable object is newly created, its set of observers
+//is empty. Two observers are considered the same if and only if the
+//equals method returns true for them.
+
+package it313.util;
+import java.util.ArrayList;
+public class Observable {
+
+    private boolean changed;
+    private ArrayList<it313.util.Observer> observers;
+
+    // Constructor creates an it313.util.util.Observable with zero Observers.
+    public Observable( ) {
+        changed = false;
+        observers = new ArrayList<it313.util.Observer>( );
+    }
+
+    // Add an observer to the set of observers for this object,
+    // provided that it is not the same as some observer already
+    // in the set. The order in which notifications will be
+    // delivered to multiple observers is not specified. See the
+    // class comment.
+    public void addObserver(Observer o) {
+        // -->> CHeck if o is already in the collection
+        observers.add(o);
+    }
+
+    // Deletes an observer from the set of observers of this object.
+    // Passing null to this method will have no effect.
+    public void deleteObserver(Observer o) {
+        observers.remove(o);
+    }
+
+    // Clears the observer list so that this object no longer has
+    // any observers.
+    public void deleteObservers( ) {
+        observers.clear( );
+    }
+
+    // If this object has changed, as indicated by the hasChanged
+    // method, then notify all of its observers and then call the
+    // clearChanged method to indicate that this object has no
+    // longer changed.  Each observer has its update method called
+    // with two arguments: this observable object and null. In other
+    // words, this method is equivalent to:
+    //    notifyObservers(null)
+    public void notifyObservers(Object arg ) {
+        for(Observer o : observers) {
+            o.update(this, arg);
+            this.clearChanged( );
+        }
+    }
+
+    // Marks this it313.util.util.Observable object as having been changed; the
+    // hasChanged method will now return true.
+    public void setChanged( ) {
+        changed = true;
+    }
+
+    // Indicates that this object has no longer changed, or that it
+    // has already notified all of its observers of its most recent
+    // change, so that the hasChanged method will now return false.
+    // This method is called automatically by the notifyObservers
+    // method.
+    public void clearChanged( ) {
+        changed = false;
+    }
+
+    // Returns true if and only if the setChanged method has been called more
+    // recently than the clearChanged method on this object; false otherwise.
+    public boolean hasChanged( ) {
+        return changed;
+    }
+
+    // Returns the number of observers of this it313.util.util.Observable object.
+    public int countObservers( ) {
+        return observers.size( );
+    }
+}
+
+/////////////////////////////////////////////////////////OBSERVABLE.JAVA/////////////////////////////////////////////////////////////////
+//Akshat Shah
+//IT 313
+// Project: Observer
+// Module: observer
+// Package: it313.util
+// Source code file: Observer.java
+
+// A class can implement the it313.util.Observer interface when it wants to be
+// informed of changes in observable objects.
+
+package it313.util;
+public interface Observer {
+
+    // This method is called whenever the observed object is changed.
+    // An application calls an it313.util.util.Observable object's notifyObservers
+    // method to have all the object's observers notified of the change.
+    void update(Observable o, Object arg);
+}
+
+
+
+
+</code></pre>
+</body>

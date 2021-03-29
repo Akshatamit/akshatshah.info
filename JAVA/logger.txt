@@ -1,0 +1,5 @@
+ID: 1001, Buyer: Eugene Eko, Seller: Hilton Hotels, Amount: $53135.04, Timestamp: 2018 Jan 14 16:01:17
+ID: 1002, Buyer: Eugene Eko, Seller: Acme Airlines, Amount: $50213.05, Timestamp: 2018 Jan 27 02:38:49
+ID: 1003, Buyer: Eugene Eko, Seller: Chase Bank, Amount: $62111.53, Timestamp: 2018 Mar 2 02:05:46
+ID: 1004, Buyer: Eugene Eko, Seller: Mainstay Bank, Amount: $62338.68, Timestamp: 2018 May 12 09:45:57
+ID: 1005, Buyer: Eugene Eko, Seller: Worldwide Bank, Amount: $54504.12, Timestamp: 2018 May 15 04:10:03

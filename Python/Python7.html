@@ -1,0 +1,159 @@
+<button onclick="goBack()" style="background-color: black; border: none; color: white;padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px; margin-left: -10px; cursor:pointer;">Back</button>
+     <script>
+     function goBack() {
+       window.history.back();
+     }
+     </script>
+<head>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+        <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+  <pre><code class="python">#Akshat Shah
+#IT 212
+#Bowling.py
+
+#Importing the frame score and raggedreadarray method from their respective file
+from framescore import frame_score 
+from raggedreadarray import read_ragged_array
+
+#Allowing the user to input the game file through keyboard
+input_file = input("Enter file name:")
+
+#Call the read_ragged_array method to create a ragged array of the data in
+#the input_file likegame1.txt, game2.txt, or game3.txt.
+frames = read_ragged_array(input_file)
+
+#Intialize the score to zero
+score = 0
+
+#Using for loop 
+for i in range (1,11):
+
+    #using the if statements for specific condition in the game
+    #Assiging 10 to bonus 1 and frames to bonus 2
+    if frames[i][0] == 10 and frames[i+1][0] == 10:
+        bonus1 = 10
+        bonus2 = frames[i+2][0]
+
+    #Assigning the frames to bonus 1 and bonus 2
+    elif frames[i][0] == 10 and frames[i+1][0] < 10:
+        bonus1 = frames[i+1][0]
+        bonus2 = frames[i+1][1]
+
+    #Assigning the frames to bonus 1 and zero to bonus 2 
+    elif frames [i][0] + frames [i][1] == 10:
+        bonus1 = frames[i+1][0]
+        bonus2 = 0
+
+    #Assign zero to bonus 1 and bonus 2
+    else:
+        bonus1 = 0
+        bonus2 = 0
+
+    #Calculating the score
+    score += frame_score(frames[i], bonus1, bonus2)
+
+#Printing the score 
+print(score)
+
+***************************
+*******framescore.py*******
+***************************
+
+
+#Defining the frame_score method
+def frame_score(the_frame,bonus1,bonus2):
+
+# Case where frame is a strike
+    if the_frame[0] == 10:
+        return 10 + bonus1 + bonus2
+# Case where frame is a spare
+    elif the_frame[0] + the_frame[1] == 10:
+        return 10 + bonus1
+# Case where frame is an open frame
+    else:
+        return the_frame[0] + the_frame[1]
+
+
+***************************
+****raggedreadarray.py*****
+***************************
+
+# RaggedArray Example
+# A ragged array is an array whose rows need not be the same length.
+# Define a method that reads a ragged array from a file.
+# Then use the sum_array method used in the Array2 Example to sum
+# each row of the ragged array, creating a new array of the row sums.
+
+# Define method to read a ragged array
+def read_ragged_array(the_filename):
+  
+    # Initialize ragged array
+    ragged_array = [["Frame0"]]
+
+    # Open input file and read first line
+    f = open(the_filename, "r")
+    line = f.readline( )
+  
+    # Keep processing lines until end of file is reached.
+    while line:
+        fields = line.split(" ")
+        row = [ ]
+      
+        # Append each field item to the row array
+        for field in fields:
+            row.append(int(field.strip()))
+      
+        # When finished constructing row, append
+        # to ragged_array.
+        ragged_array.append(row)
+
+        # Read next line
+        line = f.readline( )
+  
+    # When finished reading file, return ragged array
+    return ragged_array
+    
+***************************
+****testframescore.py******
+***************************
+
+import unittest
+
+#Importing the frame_score method from framscore file
+from framescore import frame_score
+
+class TestFrameScore(unittest.TestCase):
+    
+    #Test 1
+    def test_1(self):
+        self.assertEqual(frame_score([10], 10, 7), 27)
+    #Test 2
+    def test_2(self):
+        self.assertEqual(frame_score([7, 3], 9, 0), 19)
+    #Test 3
+    def test_3(self):
+        self.assertEqual(frame_score([7, 1], 0, 0), 8)
+
+if __name__ == '__main__':
+    unittest.main()
+ 
+#INPUT FILE
+<a href="#" onclick="window.open('game1.txt', '_blank');">Game1.txt</a>
+<a href="#" onclick="window.open('game2.txt', '_blank');">Game2.txt</a>
+<a href="#" onclick="window.open('game3.txt', '_blank');">Game3.txt</a>
+
+
+</code></pre>
+</body>
+
+

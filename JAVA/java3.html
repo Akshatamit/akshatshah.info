@@ -1,0 +1,206 @@
+<button onclick="goBack()" style="background-color: black; border: none; color: white;padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px; margin-left: -10px; cursor:pointer;">Back</button>
+     <script>
+     function goBack() {
+       window.history.back();
+     }
+     </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+     <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <pre><code class="python">
+/////////////////////////////////////////////////////////CALENDAR.JAVA//////////////////////////////////////////////////////////////////
+ 
+//Akshat Shah
+//IT 313
+//Project 3
+//Main file with all the methods
+
+//Importing calendar for certain classes
+import java.util.Calendar;
+public class calendar{
+    public static void main(String[] args) {
+        //set inputs
+        int month = 12;
+        int day = 2;
+        int year = 1998;
+
+        //Creating string to test the method
+        String dayOfWeekString = dayOfWeek(month, day, year);
+        System.out.println(dayOfWeekString);
+    }
+
+    public static String dayOfWeek(int month, int day, int year) {
+        //set up array for day names.
+        //Recall that day of week is one-based
+        String[ ] dayNames = {" ", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+        //Create a Calendar Object
+        Calendar cal = Calendar.getInstance();
+
+        //Set date in calendar
+        //  As month is one-based, - 1 allows me to put month number from 1 to 12.
+        //  for example in here december is 11 but I can just put 12 and it will -1 to it to 11.
+        cal.set(year, (month) - 1,day);
+
+        //Get day of the week code
+        //This allows to get week day code and translates it to the day name, using the array we assigned before
+        //called dayNames.
+        //dayNames[4] would be wednesday
+        int dayOfWeekCode = cal.get(Calendar.DAY_OF_WEEK);
+        return dayNames[dayOfWeekCode];
+    }
+}
+
+/////////////////////////////////////////////////////////TEST1.JAVA//////////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+//Traditional Testing
+
+public class Test1{
+
+            public static void main(String[]args){
+
+                //Checking 10/6/2019
+                String date1 = calendar.dayOfWeek(10,6,2019);
+                System.out.print("Date is 10/6/2019, Day is: " + date1 + "." + "\n");
+
+                //Checking 1/8/2019
+                String date2 = calendar.dayOfWeek(1,7,2019);
+                System.out.print("Date is 1/7/2019, Day is: " + date2 + "." + "\n");
+
+                //Checking 2/5/2019
+                String date3 = calendar.dayOfWeek(2,5,2019);
+                System.out.print("Date is 2/5/2019, Day is: " + date3 + "." + "\n");
+
+                //Checking 12/2/1998(My BirthDate)
+                String date4 = calendar.dayOfWeek(12,2,1998);
+                System.out.print("My BirthDate is 12/2/1998, Day is: " + date4 + "." + "\n");
+
+                //Checking 11/28/2019
+                String date5 = calendar.dayOfWeek(11,28,2019);
+                System.out.print("Date is 11/28/2019, ThanksGiving is on: " + date5 + "." + "\n");
+
+                //Checking 11/29/2019
+                String date6 = calendar.dayOfWeek(11,29,2019);
+                System.out.print("Date is 11/29/2019, BlackFriday is on : " + date6 + "." + "\n");
+
+                //Checking 11/30/2019
+                String date7 = calendar.dayOfWeek(11,30,2019);
+                System.out.print("Date is 11/30/2019, Day is: " + date7 + "." );
+
+
+
+            }
+            }
+/////////////////////////////////////////////////////////TEST2.JAVA//////////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+//Unit Testing
+
+//This import tool allows me to run each test and imports the junit
+import org.junit.jupiter.api.Test;
+
+//Imports the assertions
+import static org.junit.jupiter.api.Assertions.*;
+//Unit Test
+public class Test2 {
+
+    //Date1
+    //Checking for all the tests by passing in expected and actual statements
+    @Test
+    public void dayOfWeek() {
+       assertEquals("Sunday", calendar.dayOfWeek(10,6,2019));
+    }
+
+    //Date2
+    @Test
+    public void dayOfWeek1() {
+        assertEquals("Monday", calendar.dayOfWeek(1,7,2019));
+    }
+
+    //Date3
+    @Test
+    public void dayOfWeek2() {
+        assertEquals("Tuesday", calendar.dayOfWeek(2,5,2019));
+    }
+
+    //Date4
+    @Test
+    public void dayOfWeek3() {
+        assertEquals("Wednesday", calendar.dayOfWeek(12,2,1998));
+    }
+
+    //Date5
+    @Test
+    public void dayOfWeek4() {
+        assertEquals("Thursday", calendar.dayOfWeek(11,28,2019));
+    }
+
+    //Date6
+    @Test
+    public void dayOfWeek5() {
+        assertEquals("Friday", calendar.dayOfWeek(11,29,2019));
+    }
+
+    //Date7
+    @Test
+    public void dayOfWeek6() {
+        assertEquals("Saturday", calendar.dayOfWeek(11,30,2019));
+    }
+}
+/////////////////////////////////////////////////////////TEST3.JAVA//////////////////////////////////////////////////////////////////
+
+//Akshat Shah
+//IT 313
+//Ineteractive Test
+
+//Importing the java lang string
+import java.lang.*;
+import java.util.Scanner;
+
+public class Test3 {
+    public static void main(String[] args) {
+
+        //Creating a new scanner to allow the user for passing in the inputs
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("**To exit/terminate the process, press ctrl + d**");
+        System.out.println("Please enter the date:");
+
+        //this ensures that it keep reading the next line
+        while (s.hasNextLine()) {
+            String line = s.nextLine();
+            //Split each field by / sign.
+            String[] fields = line.split("/");
+
+            //Assigning each variable the fields
+            int month = Integer.parseInt(fields[0]);
+            int day = Integer.parseInt(fields[1]);
+            int year = Integer.parseInt(fields[2]);
+
+            //This method takes whatever date user types and gives user day of the week
+            //Creating string and calling the method from calendar
+            String dayOfWeekString = calendar.dayOfWeek(month, day, year);
+            System.out.println(dayOfWeekString);
+
+        }
+
+    }
+}
+         
+</code></pre>
+</body>

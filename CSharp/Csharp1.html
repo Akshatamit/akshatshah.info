@@ -1,0 +1,122 @@
+<button onclick="goBack()" style="background-color: black; border: none; color: white;padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px; margin-left: -10px; cursor:pointer;">Back</button>
+     <script>
+     function goBack() {
+       window.history.back();
+     }
+     </script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+     <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <pre><code class="python">#Akshat shah
+#Project 1
+/////////////////////////////////////////////////////////FORM1.CS/////////////////////////////////////////////////////////////////
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MusicPlayer_AKSHAT_
+{
+    public partial class AkshatMusicApp : Form
+    {
+        public AkshatMusicApp()
+        {
+            InitializeComponent();
+        }
+        String[] paths, files;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+
+    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //code to select songs
+            //code to select songs
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            //To select multiple files
+            ofd.Multiselect = true;
+
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //Saves the names of the tracks
+                files = ofd.SafeFileNames;
+
+                //Save the paths of the track in the array
+                paths = ofd.FileNames;
+
+                //Display the music titles in listbox
+                for (int i = 0; i < files.Length; i++)
+                {
+                    //Displays the songs in the listbox
+                    listBoxSongs.Items.Add(files[i]);
+
+                }
+            }
+        }
+
+        private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Write a code to play music
+            axWindowsMediaPlayer2.URL = paths[listBoxSongs.SelectedIndex];
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        
+
+    }
+}
+/////////////////////////////////////////////////////////Program.CS/////////////////////////////////////////////////////////////////
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MusicPlayer_AKSHAT_
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new AkshatMusicApp());
+        }
+    }
+}
+
+
+         
+</code></pre>
+</body>
+
+
