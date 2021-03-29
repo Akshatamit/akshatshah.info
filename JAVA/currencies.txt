@@ -1,5 +1,0 @@
-JPY
-INR
-MXN
-USD
-GBP
