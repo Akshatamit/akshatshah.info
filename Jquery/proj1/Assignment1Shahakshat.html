@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<!--Akshat shah-->
+<!--IT 238 -->
+<!--This web app will allow us to calculate the monthly payment, it can be used for any kind of monthly payment estimate, like example
+mortgage, car or any type of other loan one is looking for-->
+<title> Loan calculator</title>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+<link rel="stylesheet"; href="Loan.css">
+</head>
+<body>
+<h1>Loan calculator</h1>
+<P>
+<label for="loanField">Loan Amount:</label>
+<input type="text" id="loanField"  size="2"/>
+<br>
+<br>
+<label for="rateField">Interest rate in percent:</label>
+<input type="text" id="rateField"  size="2"/>
+<br>
+<br>
+<label for="durationField">Duration of loan in years:</label>
+<input type="text" id="durationField"  size="2"/>
+<br>
+</P>
+<input type="button" id = "paymentButton" value="Get the payment" ; style="margin-left: 38%; position: fixed"/>
+<br>
+<script src="Loan.js"></script>
+<p id = "display"></p>    
+</body>
+<html>
