@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/akshatshah.info/static/css/main.fe1a88d8.chunk.css",
+    "main.js": "/akshatshah.info/static/js/main.0bd278b8.chunk.js",
+    "main.js.map": "/akshatshah.info/static/js/main.0bd278b8.chunk.js.map",
+    "runtime-main.js": "/akshatshah.info/static/js/runtime-main.10fae656.js",
+    "runtime-main.js.map": "/akshatshah.info/static/js/runtime-main.10fae656.js.map",
+    "static/js/2.5d04397f.chunk.js": "/akshatshah.info/static/js/2.5d04397f.chunk.js",
+    "static/js/2.5d04397f.chunk.js.map": "/akshatshah.info/static/js/2.5d04397f.chunk.js.map",
+    "index.html": "/akshatshah.info/index.html",
+    "static/css/main.fe1a88d8.chunk.css.map": "/akshatshah.info/static/css/main.fe1a88d8.chunk.css.map",
+    "static/js/2.5d04397f.chunk.js.LICENSE.txt": "/akshatshah.info/static/js/2.5d04397f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10fae656.js",
+    "static/js/2.5d04397f.chunk.js",
+    "static/css/main.fe1a88d8.chunk.css",
+    "static/js/main.0bd278b8.chunk.js"
+  ]
+}
