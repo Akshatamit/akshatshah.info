@@ -81,10 +81,23 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <video class="img-res" controls>
+                   <style>
+                iframe{
+                    width: 100%;
+                }
+            </style>
+            <body>
+            <iframe src="Jquery/proj5/Assignment5Shahakshat.html" id="myIframe" ></iframe>
 
-                        <source src="assets/img/watz1.mp4">
-                    </video>
+            <script>
+                // Selecting the iframe element
+                var iframe = document.getElementById("myIframe");
+
+                // Adjusting the iframe height onload event
+                iframe.onload = function(){
+                    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                }
+            </script>
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title">Calculator</h4>
