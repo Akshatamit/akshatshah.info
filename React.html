@@ -82,22 +82,27 @@
             <div class="modal-content">
                 <div class="modal-header">
                    <style>
-                iframe{
-                    width: 100%;
-                }
-            </style>
-            <body>
-            <iframe src="Jquery/proj5/Assignment5Shahakshat.html" id="myIframe" ></iframe>
+                        iframe {
+                            width: 200%;
+                            height: 100%;
+                            border: 2px solid #ccc;
+                        }
+                    </style>
+                    <body>
+                        <iframe src="https://akshatamit.github.io/" id="myIframe" style="overflow-x: scroll;"></iframe>
 
-            <script>
-                // Selecting the iframe element
-                var iframe = document.getElementById("myIframe");
+                        <script>
+                            // Selecting the iframe element
+                            var iframe = document.getElementById("myIframe");
 
-                // Adjusting the iframe height onload event
-                iframe.onload = function(){
-                    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-                }
-            </script>
+                            // Adjusting the iframe height onload event
+                            iframe.onload = function () {
+                                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                                iframe.style.width = iframe.contentWindow.document.body.scrollWidth + 'px';
+                            }
+                           
+                        </script>
+                    </body>
                 </div>
                 <div class="modal-body">
                     <h4 class="modal-title">Calculator</h4>
