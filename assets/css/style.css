@@ -916,3 +916,51 @@ html {
     scroll-behavior: smooth !important;
 }
 
+/* =========================================
+   FIX PARAGRAPH Alignment (Keeps it on screen)
+   ========================================= */
+#about p,
+.section-about p,
+.m3-card p {
+    text-align: justify !important; /* Clean, readable, standard */
+
+    /* Optional: If you want it to look even cleaner */
+    text-wrap: pretty; /* New CSS feature that prevents "orphan" words at the end of lines */
+}
+
+/* =========================================
+   FIX VIDEO OVERFLOW (THE WRAPPER METHOD)
+   ========================================= */
+:not(:root):fullscreen {
+    object-fit: contain;
+    user-select: text;
+    position: fixed !important;
+    box-sizing: border-box !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    width: 50% !important;
+    height: 100% !important;
+    transform: none !important;
+    inset: 0px !important;
+    margin: 0px !important;
+}
+
+/* =========================================
+   ROUNDED CORNERS FOR VIDEOS
+   ========================================= */
+
+video,
+iframe,
+.embed-responsive,
+.video-wrapper {
+    /* 1. Add the curve (8px is standard, 12px is softer) */
+    border-radius: 12px !important;
+
+    /* 2. CRITICAL: Clip the content so the video doesn't poke out */
+    overflow: hidden !important;
+
+    /* 3. Optional: Add a subtle border to define the edge on dark backgrounds */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
