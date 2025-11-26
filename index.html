@@ -1,4 +1,5 @@
 <!--MODIFIED BY AKSHAT SHAH-->
+<!-- Updated file to include Google M3 Design language on the site - AShah -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -40,6 +41,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/AS1.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Montserrat:wght@700;800&display=swap"
+          rel="stylesheet">
     <!-- Stylesheets
     ================================================== -->
     <!-- Bootstrap core CSS -->
@@ -58,673 +63,786 @@
 </head>
 <body>
 
-    <header id="masthead" class="site-header" data-anchor-target=".hero" data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);" data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
-        <nav id="primary-navigation" class="site-navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
+<header id="masthead" class="site-header" data-anchor-target=".hero"
+        data-top="background: rgba(255,255,255,0); padding: 30px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0);"
+        data-top-bottom="background: rgba(255,255,255,1); padding: 10px 0; box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.2);">
+    <nav id="primary-navigation" class="site-navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
 
-                    <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse" aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                <button type="button" class="navbar-toggle collapsed" data-target="#portfolio-perfect-collapse"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                    <a href="#hero" class="site-logo"><img src="assets/img/dd22dcb89c5f4d1a8567c1fa5b110651.png" alt="logo"></a>
+                <a class="navbar-brand text-logo" href="#hero">
+                    AKSHAT SHAH
+                </a>
 
-                </div><!-- /.navbar-header -->
+            </div><!-- /.navbar-header -->
 
-                <div class="main-menu" id="portfolio-perfect-collapse">
+            <div class="main-menu" id="portfolio-perfect-collapse">
 
-                    <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right">
 
-                        <li class="page-scroll"><a href="#hero">Home</a></li>
-                        <li class="page-scroll"><a href="#about">About</a></li>
-                        <li class="page-scroll"><a href="#portfolio">Work History</a></li>
-                        <li class="page-scroll"><a href="#projects">Projects</a></li>
-                        <li class="page-scroll"><a href="#form">Contact</a></li>
+                    <li class="page-scroll"><a href="#hero">Home</a></li>
+                    <li class="page-scroll"><a href="#about">About</a></li>
+                    <li class="page-scroll"><a href="#portfolio">Work History</a></li>
+                    <li class="page-scroll"><a href="#projects">Projects</a></li>
+                    <li class="page-scroll"><a href="#form">Contact</a></li>
 
-                    </ul><!-- /.navbar-nav -->
+                </ul><!-- /.navbar-nav -->
 
-                </div><!-- /.navbar-collapse -->
+            </div><!-- /.navbar-collapse -->
 
+        </div>
+    </nav><!-- /.primary-navigation -->
+</header><!-- /#header -->
+
+<div id="hero" class="hero">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h1>Akshat Shah</h1>
+                <div class="page-scroll">
+                    <p class="job-title">Software Engineer</p>
+                    <a href="#form" class="btn btn-fill ">Hire me</a>
+                    <div class="clearfix visible-xxs"></div>
+                    <a href="#portfolio" class="btn btn-border">Explore more</a>
+                </div>
             </div>
-        </nav><!-- /.primary-navigation -->
-    </header><!-- /#header -->
+            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer
+                    type="text/javascript"></script>
 
-    <div id="hero" class="hero">
+        </div>
+    </div>
+
+    <div class="col-md-6 text-right">
+        <div class="hero-avatar">
+            <img src="assets/img/me.jpg"
+                 class="my-avatar"
+                 alt="Akshat Shah">
+        </div>
+    </div>
+</div><!-- /.hero -->
+
+
+<main id="main" class="site-main">
+
+    <section id="about" class="site-section section-about text-center">
         <div class="container">
             <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2>About Me</h2>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                    <p style="text-align: justify;">As a Mid-level Software Development Engineer with 4 years of
+                        experience, I specialize in building and maintaining robust, scalable enterprise applications.
+                        My expertise covers the full software development lifecycle, from designing and implementing new
+                        features in Java for critical systems like the South Dakota Medicaid
+                        Eligibility and Enrollment project, to developing seamless REST APIs for complex data
+                        integrations.
+                        I'm proficient in writing clean code from scratch, performing rigorous testing, debugging, and
+                        resolving defects, along with optimizing data processing through efficient batch processes. <br><br>
 
-                <div class="col-md-6">
-                    <h1>Akshat Shah</h1>
-                    <div class="page-scroll">
-                        <p class="job-title">Software Developer</p>
-                        <a href="#form" class="btn btn-fill ">Hire me</a>
-                        <div class="clearfix visible-xxs"></div>
-                        <a href="#portfolio" class="btn btn-border">Explore more</a>
-                    </div>
+                        Beyond development, I actively contribute to application maintenance and operations, including
+                        proactively analyzing data to identify anomalies, remediating bad data created by online
+                        processes,
+                        and ensuring overall system reliability and accuracy. I'm highly skilled in utilizing log
+                        analysis and monitoring tools for comprehensive analysis and troubleshooting, and leverage API
+                        Management (APIM)
+                        for crucial insights into API performance and debugging. I thrive in collaborative environments,
+                        consistently conduct thorough code reviews to ensure quality, and am passionate about mentoring
+                        junior
+                        developers and fostering team growth through continuous knowledge sharing.</p>
+                    <a href="resume/AkshatSoftwareDeveloper.pdf" class="btn btn-fill" target="_blank" download>Download
+                        my cv</a>
                 </div>
-                <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
             </div>
         </div>
-        <div class="col-md-6 text-right" >
+    </section><!-- /.secton-about -->
 
-        </div>
-    </div><!-- /.hero -->
-
-
-
-    <main id="main" class="site-main">
-
-        <section id="about" class="site-section section-about text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h2>About</h2>
-                        <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                        <p style="text-align: justify;">As a Mid-level Software Development Engineer with 4 years of experience, I specialize in building and maintaining robust, scalable enterprise applications. 
-                            My expertise covers the full software development lifecycle, from designing and implementing new features in Java for critical systems like the South Dakota Medicaid 
-                            Eligibility and Enrollment project, to developing seamless REST APIs for complex data integrations. 
-                            I'm proficient in writing clean code from scratch, performing rigorous testing, debugging, and resolving defects, along with optimizing data processing through efficient batch processes. <br><br>
-
-                            Beyond development, I actively contribute to application maintenance and operations, including proactively analyzing data to identify anomalies, remediating bad data created by online processes, 
-                            and ensuring overall system reliability and accuracy. I'm highly skilled in utilizing log analysis and monitoring tools for comprehensive analysis and troubleshooting, and leverage API Management (APIM) 
-                            for crucial insights into API performance and debugging. I thrive in collaborative environments, consistently conduct thorough code reviews to ensure quality, and am passionate about mentoring junior 
-                            developers and fostering team growth through continuous knowledge sharing.</p>
-                        <a href="resume/AkshatSoftwareDeveloper.pdf" class="btn btn-fill" target="_blank" download>Download my cv</a>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.secton-about -->
-
-        <section id="portfolio" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Work history</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/loading.gif" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Loading...</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem9"><span class="glyphicon glyphicon-eye-open"  title="Hire to unlock"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/RT.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Software Engineer</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem11"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/DPCP.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Web developer | Agile developer</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem10"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <br />
-                    <br />
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/DD.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Team Leader | Cashier</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem8"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.secton-portfolio -->
-
-        <section id="projects" class="site-section section-portfolio">
-            <div class="container">
-                <div class="text-center">
-                    <h3>Personal Projects</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/java.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Java Projects</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="JAVA.html"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/python.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Python Projects</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="Python.html"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/js.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>JavaScript Projects</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="Jquery.html"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <br>
-                    <br>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/cSharp.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>C# Projects</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem5"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="CSharp.html"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/CMS.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Content Management</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem4"><span class="glyphicon glyphicon-eye-open"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/ruby.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>Ruby On Rails</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem6"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="Ruby.html"><span class="glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                    <br />
-                    <br />
-                    <div class="col-md-4 col-xs-6">
-                        <div class="portfolio-item">
-                            <img src="assets/img/react.png" class="img-res" alt="">
-                            <div class="portfolio-item-info">
-                                <h4>React</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem7"><span class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="React.html"><span class=" glyphicon glyphicon-link"></span></a>
-                            </div><!-- /.portfolio-item-info -->
-                        </div><!-- /.portfolio-item -->
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.secton-portfolio -->
-
-
-
-        <section class="site-section section-skills">
-            <div class="container">
-                <div class="text-center">
-                    <h3>My Skills</h3>
-                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                </div>
-                <div class="row">
-                    
-                 <div class="col-md-4">
-                        <div class="skill">
-                            <h4>Java</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="80"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->
-                     
-                        <div class="skill">
-                            <h4>Git</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="75"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->
-                 </div><!-- /.col-md-4-->    
-                 <div class="col-md-4">
-                         <div class="skill">
-                            <h4>SQL</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="88"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->
-                
-                         <div class="skill">
-                            <h4>Javascript</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="82"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->
-                  </div><!-- /.col-md-4-->    
-                  <div class="col-md-4">
-                        <div class="skill">
-                            <h4>Html/css</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="100"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->
-                        <div class="skill">
-                            <h4>Python</h4>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-transitiongoal="75"></div><!-- /.progress-bar -->
-                            </div><!-- /.progress -->
-                        </div><!-- /.skill -->           
-                    </div><!-- /.col-md-4-->
-               </div><!-- /.row -->  
-             </div><!-- /.container --> 
-        </section><!-- /.secton-skills -->
-
-        <section id="service" class="site-section section-services overlay text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>What i can do</h3>
-                        <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/front-end.svg" alt="Front End Developer">
-                            <h4>Front-end</h4>
-
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/back-end.svg" alt="Back End Developer">
-                            <h4>Back-end</h4>
-
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/project-management.svg" alt="Coding">
-                            <h4>Project Management</h4>
-
-                        </div><!-- /.service -->
-
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/web-development.svg" alt="Coding">
-                            <h4>Web Development</h4>
-
-                        </div><!-- /.service -->
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/analysis.svg" alt="Coding">
-                            <h4>Analysis</h4>
-
-                        </div><!-- /.service -->
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="service">
-                            <img src="assets/img/service.svg" alt="Coding">
-                            <h4>Data Management</h4>
-
-                        </div><!-- /.service -->
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-        </section><!-- /.secton-services -->
-
-
-
-        <section class="site-section section-counters text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-12">
-                        <p class="counter start" data-to="4" data-speed="2000">0</p>
-                        <h4>Plus year of industry experience</h4>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <p class="counter start" data-to="26" data-speed="2000">0</p>
-                        <h4>Projects Created</h4>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <p id="infinity" class="counter" data-from="0" data-to="1" data-speed="1000">0</p>
-                        <h4>Seconds on this site!<br>What are you waiting for?</h4>
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.section-counters -->
-
-        <section id="contact" class="site-section section-form text-center">
-            <div class="container">
-
-                <h3>Certificates</h3>
+    <section id="portfolio" class="site-section section-portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h3>My Work history</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-
-
-
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6">
-                            <a href="Certificates/JAVA-Certificiate(Akshat).pdf" target="_blank">
-                                <div class="portfolio-item">
-                                    <img src="assets/img/javaCert.png" class="img-res" alt="">
-
-                                    <div class="portfolio-item-info">
-
-                                        <h4>Java</h4>
-
-                                    </div><!-- /.portfolio-item-info -->
-                                </div><!-- /.portfolio-item -->
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-xs-6">
-                            <a href="Certificates/CSharp-Certificiate(Akshat).pdf" target="_blank">
-                                <div class="portfolio-item">
-
-                                    <img src="assets/img/cSharpCert.png" class="img-res" alt="">
-
-                                    <div class="portfolio-item-info">
-
-                                        <h4>C#</h4>
-
-                                    </div><!-- /.portfolio-item-info -->
-                                </div><!-- /.portfolio-item -->
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-xs-6">
-                            <a href="Certificates/SQL-Certificiate(Akshat).pdf" target="_blank">
-                                <div class="portfolio-item">
-                                    <img src="assets/img/SQL.png" class="img-res" alt="">
-                                    <div class="portfolio-item-info">
-                                        <h4>SQL</h4>
-                                    </div><!-- /.portfolio-item-info -->
-                                </div><!-- /.portfolio-item -->
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-xs-6">
-                            <a href="https://www.sololearn.com/Certificate/1092-18827871/jpg/" target="_blank">
-                                <div class="portfolio-item">
-                                    <img src="assets/img/angular.png" class="img-res" alt="">
-                                    <div class="portfolio-item-info">
-                                        <h4>Angular | NestJS</h4>
-                                    </div><!-- /.portfolio-item-info -->
-                                </div><!-- /.portfolio-item -->
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-xs-6">
-                            <a href="https://www.youracclaim.com/badges/e7b72e20-7f23-44db-aa39-b3a8d8f4c232?source=linked_in_profile" target="_blank">
-                                <div class="portfolio-item">
-                                    <img src="assets/img/att.png" class="img-res" alt="">
-                                    <div class="portfolio-item-info">
-                                        <h4>AT&T Summer Learning Academy Extern</h4>
-                                    </div><!-- /.portfolio-item-info -->
-                                </div><!-- /.portfolio-item -->
-                            </a>
-                        </div>
-                        <br>
-                        <br>
-
-                    </div>
-                </div>
-                <form id="form">
-                    <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=akshatamitshah@gmail.com&su=Job oppurtunity!" class="btn btn-border" type="submit" target="_blank">Hire Me <span class="glyphicon glyphicon-send"></span></a>
-                </form>
-
-
             </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/loading.gif" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Loading...</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem9"><span
+                                    class="glyphicon glyphicon-eye-open" title="Hire to unlock"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
 
-        </section><!-- /.section-form -->
-        <footer id="colophon" class="site-footer">
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/RT.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Software Engineer</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem11"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/DPCP.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Web developer | Agile developer</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem10"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <br/>
+                <br/>
+                <!--<div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/DD.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Team Leader | Cashier</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem8"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                        </div>&lt;!&ndash; /.portfolio-item-info &ndash;&gt;
+                    </div>&lt;!&ndash; /.portfolio-item &ndash;&gt;
+                </div>-->
+            </div>
+        </div>
+    </section><!-- /.secton-portfolio -->
+
+    <section id="projects" class="site-section section-portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h3>Personal Projects</h3>
+                <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/java.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Java Projects</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="JAVA.html"><span class="glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/python.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Python Projects</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="Python.html"><span class="glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/js.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>JavaScript Projects</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="Jquery.html"><span class="glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <br>
+                <br>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/cSharp.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>C# Projects</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem5"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="CSharp.html"><span class="glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/CMS.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Content Management</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem4"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/ruby.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>Ruby On Rails</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem6"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="Ruby.html"><span class="glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+                <br/>
+                <br/>
+                <div class="col-md-4 col-xs-6">
+                    <div class="portfolio-item">
+                        <img src="assets/img/react.png" class="img-res" alt="">
+                        <div class="portfolio-item-info">
+                            <h4>React</h4>
+                            <a href="#" data-toggle="modal" data-target="#portfolioItem7"><span
+                                    class="glyphicon glyphicon-eye-open"></span></a>
+                            <a href="React.html"><span class=" glyphicon glyphicon-link"></span></a>
+                        </div><!-- /.portfolio-item-info -->
+                    </div><!-- /.portfolio-item -->
+                </div>
+            </div>
+        </div>
+    </section><!-- /.secton-portfolio -->
+
+
+    <section class="site-section section-skills">
+        <div class="container">
+            <div class="text-center">
+                <h3>My Skills</h3>
+                <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+            </div>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="skill">
+                        <h4>Java</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="80"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+
+                    <div class="skill">
+                        <h4>Git</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="75"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+                </div><!-- /.col-md-4-->
+                <div class="col-md-4">
+                    <div class="skill">
+                        <h4>SQL</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="88"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+
+                    <div class="skill">
+                        <h4>Javascript</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="82"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+                </div><!-- /.col-md-4-->
+                <div class="col-md-4">
+                    <div class="skill">
+                        <h4>Html/css</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="100"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+                    <div class="skill">
+                        <h4>Python</h4>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="75"></div>
+                            <!-- /.progress-bar -->
+                        </div><!-- /.progress -->
+                    </div><!-- /.skill -->
+                </div><!-- /.col-md-4-->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.secton-skills -->
+
+    <section id="service" class="site-section section-services overlay text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>What i can do</h3>
+                    <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+                </div>
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/front-end.svg" alt="Front End Developer">
+                        <h4>Front-end</h4>
+
+                    </div><!-- /.service -->
+                </div>
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/back-end.svg" alt="Back End Developer">
+                        <h4>Back-end</h4>
+
+                    </div><!-- /.service -->
+                </div>
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/project-management.svg" alt="Coding">
+                        <h4>Project Management</h4>
+
+                    </div><!-- /.service -->
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/web-development.svg" alt="Coding">
+                        <h4>Web Development</h4>
+
+                    </div><!-- /.service -->
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/analysis.svg" alt="Coding">
+                        <h4>Analysis</h4>
+
+                    </div><!-- /.service -->
+                </div>
+                <div class="col-sm-4">
+                    <div class="service">
+                        <img src="assets/img/service.svg" alt="Coding">
+                        <h4>Data Management</h4>
+
+                    </div><!-- /.service -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section><!-- /.secton-services -->
+
+
+    <section class="site-section section-counters text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <p class="counter start" data-to="4" data-speed="2000">0</p>
+                    <h4>Plus year of industry experience</h4>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <p class="counter start" data-to="26" data-speed="2000">0</p>
+                    <h4>Projects Created</h4>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <p id="infinity" class="counter" data-from="0" data-to="1" data-speed="1000">0</p>
+                    <h4>Seconds on this site!<br>What are you waiting for?</h4>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.section-counters -->
+
+    <section id="contact" class="site-section section-form text-center">
+        <div class="container">
+
+            <h3>Certificates</h3>
+            <img src="assets/img/lines.svg" class="img-lines" alt="lines">
+
+
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-xs-12" >
-                        <a href="https://www.linkedin.com/in/akshatamitshah" class="icons"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.linkedin.com/in/akshatamitshah" class="icons"><i class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/Akshatamit" class="icons"><i class="fab fa-github"></i></a>
-                    </div>
 
-                    <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">2025. All Rights Reserved</p></div>
-                    <div class="col-sm-4 col-xs-3">
-                        <div class="text-right page-scroll">
-                            <a class="icon icon-up-bg" href="#hero"><i class="icon-up"></i></a>
-                        </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <a href="Certificates/JAVA-Certificiate(Akshat).pdf" target="_blank">
+                            <div class="portfolio-item">
+                                <img src="assets/img/javaCert.png" class="img-res" alt="">
+
+                                <div class="portfolio-item-info">
+
+                                    <h4>Java</h4>
+
+                                </div><!-- /.portfolio-item-info -->
+                            </div><!-- /.portfolio-item -->
+                        </a>
                     </div>
+                    <div class="col-md-4 col-xs-6">
+                        <a href="Certificates/CSharp-Certificiate(Akshat).pdf" target="_blank">
+                            <div class="portfolio-item">
+
+                                <img src="assets/img/cSharpCert.png" class="img-res" alt="">
+
+                                <div class="portfolio-item-info">
+
+                                    <h4>C#</h4>
+
+                                </div><!-- /.portfolio-item-info -->
+                            </div><!-- /.portfolio-item -->
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <a href="Certificates/SQL-Certificiate(Akshat).pdf" target="_blank">
+                            <div class="portfolio-item">
+                                <img src="assets/img/SQL.png" class="img-res" alt="">
+                                <div class="portfolio-item-info">
+                                    <h4>SQL</h4>
+                                </div><!-- /.portfolio-item-info -->
+                            </div><!-- /.portfolio-item -->
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <a href="https://www.sololearn.com/Certificate/1092-18827871/jpg/" target="_blank">
+                            <div class="portfolio-item">
+                                <img src="assets/img/angular.png" class="img-res" alt="">
+                                <div class="portfolio-item-info">
+                                    <h4>Angular | NestJS</h4>
+                                </div><!-- /.portfolio-item-info -->
+                            </div><!-- /.portfolio-item -->
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6">
+                        <a href="https://www.youracclaim.com/badges/e7b72e20-7f23-44db-aa39-b3a8d8f4c232?source=linked_in_profile"
+                           target="_blank">
+                            <div class="portfolio-item">
+                                <img src="assets/img/att.png" class="img-res" alt="">
+                                <div class="portfolio-item-info">
+                                    <h4>AT&T Summer Learning Academy Extern</h4>
+                                </div><!-- /.portfolio-item-info -->
+                            </div><!-- /.portfolio-item -->
+                        </a>
+                    </div>
+                    <br>
+                    <br>
+
                 </div>
             </div>
-        </footer><!-- /#footer -->
+            <form id="form">
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=akshatamitshah@gmail.com&su=Job oppurtunity!"
+                   class="btn btn-border" type="submit" target="_blank">Hire Me <span
+                        class="glyphicon glyphicon-send"></span></a>
+            </form>
 
 
-    </main><!-- /#main -->
-    <!-- Modals -->
-    <div id="portfolioItem1" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
+        </div>
 
-                    <img src="assets/img/java.png" class="img-res" alt="">
+    </section><!-- /.section-form -->
+    <footer id="colophon" class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <a href="https://www.linkedin.com/in/akshatamitshah" class="icons"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/akshatamitshah" class="icons"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Akshatamit" class="icons"><i class="fab fa-github"></i></a>
                 </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Java Projects</h4>
-                    <p1 style="font-size:25px;">Advanced Application Development</p1>
-                    <p style="text-align: justify;">I Developed complex applications through the use of APIs. While using appropriate selection of common data structures (hash tables, trees, stacks, queues, networks) and design patterns for use in API development.</p>
-                    <p style="text-align: justify;">
-                        Going in detail I learned mostly all the basic concepts of java. To name a few
-                        Java constants, data types, variables, basic calculations. Introduction to IntelliJ IDE. Control structures (if-else, switch, while, and for statements). Arrays, loops, static methods, built in classes, sequential processing, refactoring. User defined classes, traditional tests, unit tests, exception handling, file I/O. Object oriented design, Array List collections, packages vs. modules, JAR files. Inheritance, polymorphism, abstract classes, HashMap collections. Interfaces, object-oriented design, collection frameworks, serialization. Software patterns. More software patterns, using SQLite databases. SQLite databases, multi-threading Java related technologies.I have created about 8 projects in this class using the concepts above. Please take a look at the projects.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
-    <div id="portfolioItem2" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="assets/img/python.png" class="img-res" alt="">
+                <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3"><p class="copyright">2025. All Rights
+                    Reserved</p></div>
 
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Python Projects</h4>
-                    <p style="font-size:25px;"> Application development and problem solving.</p>
-                    <p style="text-align: justify;">In this course I learned about Basic programming constructs including control structures, I/O functions and object-based programming. Projects include small-scale applications using web-services, file processing, databases and application software. I have done object-oriented programming to integrate systems and applications on multiple platforms, developing and understanding basic distributed applications and how they communicate</p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+                <a href="#hero" class="scroll-top-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 15l-6-6-6 6"/>
+                    </svg>
+                </a>
 
-    <div id="portfolioItem3" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/js.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">JavaScript Projects</h4>
-                    <p style="font-size:25px;">Interactive Web Scripting</p>
-                    <p style="text-align: justify;"> In this course I have done back-end developement  with javascript and the Document-Object Model (DOM) for creating web pages. Along with the use of Object-oriented principles applied to user interfaces and event handling. Application of Ajax was perfomed for data handling. I also Use libraries such as jQuery to develope the web pages. . </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+            </div>
+        </div>
+    </footer><!-- /#footer -->
 
-    <div id="portfolioItem5" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/cSharp.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">C# Projects</h4>
-                    <p style="text-align: justify;">Graphical user interface development for web and desktop applications. Event-driven user controls. Development involves use of a visual integrated development environment (IDE). Further I learned about all the C# basic concepts conditonals, loops, methods, object-oriented programming, data structrue, inheritance and I/o functions. </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="portfolioItem4" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/CMS.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">CMS Project</h4>
-                    <p style="text-align: justify;">Responsibility - Creating Agile Artifacts and Develop the site. A team of 5 worked to develop a website from scratch. We followed Agile methodologies to carry out the project conducting weekly meetings with the client and asking for feedback to improve our performance. We created a WordPress site for the client who wanted a simple and modern website that is compatible with mobile devices as well. The website was made to properly showcase the client's work so that his work can stand out to the customers. </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="portfolioItem6" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/ruby.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Ruby on Rails Projects</h4>
-                    <p style="text-align: justify;">Developed interactive, dynamic web sites using a common web architecture and object-based database access. In this course I focused mainly on framework called ruby on rails and created a e-commerce website entirely based on that.  </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="portfolioItem7" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/react.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">React Projects</h4>
-                    <p style="text-align: justify;">Developed web applications using current frameworks such as react, gatsby and code libraries. Researched and learned multiple frameworks with the analysis of framework advantages, disadvantages and implementation issues. Learned the importance of advanced web application development frameworks emphasizing MVC architectures and the front-end frameworks that support responsive web interfaces.</p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="portfolioItem8" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/DD.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Role - Team Leader / Cashier</h4>
-                    <p>May 2018 - Nov 2018 (7 months) | Carol Stream,IL</p>
-                    <p style="text-align: justify;">
-                        •	Responsible for ringing up the order in the timely manner, while handling the cash register <br />
-                        •	Worked as a team to meet all the customer necessity and solved any concern that customer might have.<br />
-                        •	Used my skills and experience in order to assist/train new employees understand how to use the cash registers, how to make a great experience for the customers and encouraged them to work as a team.<br />
-                        •	Always interacted with customers with positive energy and greeted customers when they arrive and leave, to invite them to return to the store again.<br />
-                        •	Opened and closed the cash registers, checking the cash limits, limit any type of errors and shortages.<br />
-                        •	Operated cash register and handling more than 100 transactions daily, while making sure all the amount is correct.<br />
-                        •	Maintained a detailed knowledge of store merchandise, and responsible for selling in store gift cards.<br />
-                    </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-     <div id="portfolioItem10" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/DPCP.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Role - Web Developer | Agile Developer</h4>
-                    <p>Jan 2020 - June 2020 (6 months) | Chicago,IL</p>
-                    <p style="text-align: justify;">
-                        • Creating Agile Artifacts and Developing the site. <br />
-                        • Worked in a team to develop a fully working site and delivered the site to the client-server. <br />
-                        • Used JavaScript CSS and WordPress to develop a site that is user-friendly across multiple platforms. <br />
-                        • Organized team & Client meetings, and gather client requirements & produce weekly reports  <br />
-                        • Organized sprints to successfully deliver the final product to the client. <br />
-                        • Conducted a team sprint retrospective at the end of each sprint.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="portfolioItem11" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img class="img-res" src="assets/img/RT.png" alt="">
-                </div>
-                <div class="modal-body">
-                    <h4 class="modal-title">Role - Software Engineer</h4>
-                    <p>June 2021 - Present | Chicago,IL</p>
-                    <p style="text-align: justify;">
-                       𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐋𝐢𝐟𝐞𝐜𝐲𝐜𝐥𝐞:<br>
-• End-to-end feature development, including coding from scratch and building complex interfaces (e.g., for Medicaid Eligibility systems).<br>
-• Designing and implementing robust RESTful APIs for seamless data integration.<br>
-• Proficient in comprehensive testing, debugging, and defect remediation.<br>
-• Experience with optimizing data processing through efficient batch processes.<br>
-• Application Maintenance & Data Operations:<br>
-  • Active involvement in the maintenance and operational support of critical enterprise applications (e.g., South Dakota Medicaid Eligibility and Enrollment system).<br>
-  • Skilled in actively analyzing application data to identify anomalies and ensure data integrity.<br>
-  • Expertise in fixing and remediating bad data generated through online processes, ensuring system reliability and accuracy.<br><br>
 
-𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠, 𝐃𝐞𝐛𝐮𝐠𝐠𝐢𝐧𝐠 & 𝐎𝐛𝐬𝐞𝐫𝐯𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐓𝐨𝐨𝐥𝐬:<br>
-• Highly skilled in leveraging various log analysis and observability platforms to perform comprehensive monitoring and swiftly troubleshoot production issues.<br>
-• Proficient in utilizing API Management (APIM) platforms for gaining insights into API usage, performance, and debugging integration challenges.<br><br>
+</main><!-- /#main -->
+<!-- Modals -->
+<div id="portfolioItem1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
 
-𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐮𝐫𝐚𝐧𝐜𝐞 & 𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐨𝐧:<br>
-• Quality Assurance: Conduct rigorous code reviews to enforce quality standards and ensure our solutions are maintainable and aligned with requirements.<br>
-• Collaborative Delivery: Partner with development and QA teams to solve complex problems and drive on-time product delivery.<br><br>
+                <img src="assets/img/java.png" class="img-res" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Java Projects</h4>
+                <p1 style="font-size:25px;">Advanced Application Development</p1>
+                <p style="text-align: justify;">I Developed complex applications through the use of APIs. While using
+                    appropriate selection of common data structures (hash tables, trees, stacks, queues, networks) and
+                    design patterns for use in API development.</p>
+                <p style="text-align: justify;">
+                    Going in detail I learned mostly all the basic concepts of java. To name a few
+                    Java constants, data types, variables, basic calculations. Introduction to IntelliJ IDE. Control
+                    structures (if-else, switch, while, and for statements). Arrays, loops, static methods, built in
+                    classes, sequential processing, refactoring. User defined classes, traditional tests, unit tests,
+                    exception handling, file I/O. Object oriented design, Array List collections, packages vs. modules,
+                    JAR files. Inheritance, polymorphism, abstract classes, HashMap collections. Interfaces,
+                    object-oriented design, collection frameworks, serialization. Software patterns. More software
+                    patterns, using SQLite databases. SQLite databases, multi-threading Java related technologies.I have
+                    created about 8 projects in this class using the concepts above. Please take a look at the projects.
+                </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 & 𝐌𝐞𝐧𝐭𝐨𝐫𝐬𝐡𝐢𝐩:<br>
-• Leadership & Team Growth: Cultivate a collaborative environment by mentoring junior developers and promoting a team-wide commitment to continuous skill improvement.<br>
-• Knowledge Sharing: Proactively share new technical knowledge to elevate the team's collective expertise and drive innovation.<br>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/skrollr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
-    <script src="assets/js/jquery.countTo.min.js"></script>
-    <script src="assets/js/script.js"></script>
+<div id="portfolioItem2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/img/python.png" class="img-res" alt="">
 
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Python Projects</h4>
+                <p style="font-size:25px;"> Application development and problem solving.</p>
+                <p style="text-align: justify;">In this course I learned about Basic programming constructs including
+                    control structures, I/O functions and object-based programming. Projects include small-scale
+                    applications using web-services, file processing, databases and application software. I have done
+                    object-oriented programming to integrate systems and applications on multiple platforms, developing
+                    and understanding basic distributed applications and how they communicate</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="portfolioItem3" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/js.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">JavaScript Projects</h4>
+                <p style="font-size:25px;">Interactive Web Scripting</p>
+                <p style="text-align: justify;"> In this course I have done back-end developement with javascript and
+                    the Document-Object Model (DOM) for creating web pages. Along with the use of Object-oriented
+                    principles applied to user interfaces and event handling. Application of Ajax was perfomed for data
+                    handling. I also Use libraries such as jQuery to develope the web pages. . </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="portfolioItem5" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/cSharp.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">C# Projects</h4>
+                <p style="text-align: justify;">Graphical user interface development for web and desktop applications.
+                    Event-driven user controls. Development involves use of a visual integrated development environment
+                    (IDE). Further I learned about all the C# basic concepts conditonals, loops, methods,
+                    object-oriented programming, data structrue, inheritance and I/o functions. </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem4" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/CMS.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">CMS Project</h4>
+                <p style="text-align: justify;">Responsibility - Creating Agile Artifacts and Develop the site. A team
+                    of 5 worked to develop a website from scratch. We followed Agile methodologies to carry out the
+                    project conducting weekly meetings with the client and asking for feedback to improve our
+                    performance. We created a WordPress site for the client who wanted a simple and modern website that
+                    is compatible with mobile devices as well. The website was made to properly showcase the client's
+                    work so that his work can stand out to the customers. </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem6" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/ruby.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Ruby on Rails Projects</h4>
+                <p style="text-align: justify;">Developed interactive, dynamic web sites using a common web architecture
+                    and object-based database access. In this course I focused mainly on framework called ruby on rails
+                    and created a e-commerce website entirely based on that. </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem7" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/react.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">React Projects</h4>
+                <p style="text-align: justify;">Developed web applications using current frameworks such as react,
+                    gatsby and code libraries. Researched and learned multiple frameworks with the analysis of framework
+                    advantages, disadvantages and implementation issues. Learned the importance of advanced web
+                    application development frameworks emphasizing MVC architectures and the front-end frameworks that
+                    support responsive web interfaces.</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem8" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/DD.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Role - Team Leader / Cashier</h4>
+                <p>May 2018 - Nov 2018 (7 months) | Carol Stream,IL</p>
+                <p style="text-align: justify;">
+                    • Responsible for ringing up the order in the timely manner, while handling the cash register <br/>
+                    • Worked as a team to meet all the customer necessity and solved any concern that customer might
+                    have.<br/>
+                    • Used my skills and experience in order to assist/train new employees understand how to use the
+                    cash registers, how to make a great experience for the customers and encouraged them to work as a
+                    team.<br/>
+                    • Always interacted with customers with positive energy and greeted customers when they arrive and
+                    leave, to invite them to return to the store again.<br/>
+                    • Opened and closed the cash registers, checking the cash limits, limit any type of errors and
+                    shortages.<br/>
+                    • Operated cash register and handling more than 100 transactions daily, while making sure all the
+                    amount is correct.<br/>
+                    • Maintained a detailed knowledge of store merchandise, and responsible for selling in store gift
+                    cards.<br/>
+                </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem10" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/DPCP.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Role - Web Developer | Agile Developer</h4>
+                <p>Jan 2020 - June 2020 (6 months) | Chicago,IL</p>
+                <p style="text-align: justify;">
+                    • Creating Agile Artifacts and Developing the site. <br/>
+                    • Worked in a team to develop a fully working site and delivered the site to the client-server.
+                    <br/>
+                    • Used JavaScript CSS and WordPress to develop a site that is user-friendly across multiple
+                    platforms. <br/>
+                    • Organized team & Client meetings, and gather client requirements & produce weekly reports <br/>
+                    • Organized sprints to successfully deliver the final product to the client. <br/>
+                    • Conducted a team sprint retrospective at the end of each sprint.
+                </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="portfolioItem11" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-res" src="assets/img/RT.png" alt="">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title">Role - Software Engineer</h4>
+                <p>June 2021 - Present | Chicago,IL</p>
+                <p style="text-align: justify;">
+                    𝐒𝐨𝐟𝐭𝐰𝐚𝐫𝐞 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 𝐋𝐢𝐟𝐞𝐜𝐲𝐜𝐥𝐞:<br>
+                    • End-to-end feature development, including coding from scratch and building complex interfaces
+                    (e.g., for Medicaid Eligibility systems).<br>
+                    • Designing and implementing robust RESTful APIs for seamless data integration.<br>
+                    • Proficient in comprehensive testing, debugging, and defect remediation.<br>
+                    • Experience with optimizing data processing through efficient batch processes.<br>
+                    • Application Maintenance & Data Operations:<br>
+                    • Active involvement in the maintenance and operational support of critical enterprise applications
+                    (e.g., South Dakota Medicaid Eligibility and Enrollment system).<br>
+                    • Skilled in actively analyzing application data to identify anomalies and ensure data
+                    integrity.<br>
+                    • Expertise in fixing and remediating bad data generated through online processes, ensuring system
+                    reliability and accuracy.<br><br>
+
+                    𝐌𝐨𝐧𝐢𝐭𝐨𝐫𝐢𝐧𝐠, 𝐃𝐞𝐛𝐮𝐠𝐠𝐢𝐧𝐠 & 𝐎𝐛𝐬𝐞𝐫𝐯𝐚𝐛𝐢𝐥𝐢𝐭𝐲 𝐓𝐨𝐨𝐥𝐬:<br>
+                    • Highly skilled in leveraging various log analysis and observability platforms to perform
+                    comprehensive monitoring and swiftly troubleshoot production issues.<br>
+                    • Proficient in utilizing API Management (APIM) platforms for gaining insights into API usage,
+                    performance, and debugging integration challenges.<br><br>
+
+                    𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐀𝐬𝐬𝐮𝐫𝐚𝐧𝐜𝐞 & 𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐢𝐨𝐧:<br>
+                    • Quality Assurance: Conduct rigorous code reviews to enforce quality standards and ensure our
+                    solutions are maintainable and aligned with requirements.<br>
+                    • Collaborative Delivery: Partner with development and QA teams to solve complex problems and drive
+                    on-time product delivery.<br><br>
+
+                    𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 & 𝐌𝐞𝐧𝐭𝐨𝐫𝐬𝐡𝐢𝐩:<br>
+                    • Leadership & Team Growth: Cultivate a collaborative environment by mentoring junior developers and
+                    promoting a team-wide commitment to continuous skill improvement.<br>
+                    • Knowledge Sharing: Proactively share new technical knowledge to elevate the team's collective
+                    expertise and drive innovation.<br>
+                </p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/skrollr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
+<script src="assets/js/jquery.countTo.min.js"></script>
+<script src="assets/js/script.js"></script>
 
 
 </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // 1. Select all links inside the mobile menu
+        const menuLinks = document.querySelectorAll('.main-menu ul li a');
+        const menu = document.querySelector('.main-menu');
+        const toggleBtn = document.querySelector('.navbar-toggle');
+
+        // 2. Add a click event to every link
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // 3. Remove the 'act' class (or 'active') to hide the menu
+                // Based on your CSS, the class that shows the menu is likely "act"
+                if (menu.classList.contains('act')) {
+                    menu.classList.remove('act');
+                    toggleBtn.classList.remove('act');
+                }
+            });
+        });
+    });
+</script>
