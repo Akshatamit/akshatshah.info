@@ -1,13 +1,37 @@
-/*
- * Theme Name: 
- * Theme URI: 
- * Author: Milan Savov
- * Author URI/Mail: milan.savov@gmail.com
- * Version: 1.0
- * */
+/* =======================================================
+   <!--Created BY AKSHAT SHAH-->
+   <!-- Updated file to include Google M3 Design language on the site - AShah -->
+   GOOGLE MATERIAL DESIGN 3 (M3) TOKENS - DARK THEME
+   ======================================================= */
+:root {
+    /* --- SENIOR NAVY THEME --- */
+    --md-sys-color-primary: #64FFDA;             /* Sharp Teal/Cyan Accent */
+    --md-sys-color-on-primary: #0A192F;          /* Dark Text on Accent */
+    --md-sys-color-primary-container: #112240;   /* Slightly lighter Navy for cards */
 
-/* FONT
-================================================== */
+    /* Backgrounds */
+    --md-sys-color-background: #020c1b;          /* Very Deep Navy (Almost Black) */
+    --md-sys-color-surface: #0a192f;             /* Navy for sections */
+    --md-sys-color-surface-variant: #112240;     /* Lighter Navy for inputs/hovers */
+
+    --md-sys-color-on-surface: #E6F1FF;          /* Off-white text (easier on eyes) */
+    --md-sys-color-on-surface-variant: #8892B0;  /* Muted Blue-Grey text */
+    --md-sys-color-outline: #233554;             /* Subtle borders */
+
+    /* Shapes - Making them slightly squarer looks more technical/serious */
+    --md-sys-shape-corner-medium: 8px;
+    --md-sys-shape-corner-large: 12px;
+    --md-sys-shape-corner-full: 4px;             /* Small rounding on buttons */
+    --font-brand: 'Roboto', sans-serif;
+
+    /* --- NEW SENIOR FONT STACK --- */
+        --font-heading: 'Space Grotesk', sans-serif;  /* Modern, technical, confident */
+        --font-body:    'Inter', sans-serif;          /* The standard for modern tech/SaaS */
+        --font-code:    'JetBrains Mono', monospace;  /* The best IDE font for devs */
+    }
+}
+
+/* FONT PRESERVATION (Fontello) */
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.eot?37927580');
@@ -16,17 +40,12 @@
        url('../fonts/fontello.woff?37927580') format('woff'),
        url('../fonts/fontello.ttf?37927580') format('truetype'),
        url('../fonts/fontello.svg?37927580#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: normal; font-style: normal;
 }
- 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
   display: inline-block;
-  text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
@@ -34,344 +53,300 @@
   text-transform: none;
   line-height: 1em;
   margin-left: .2em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
- 
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-facebook:before { content: '\f09a'; } /* '' */
-.icon-gplus:before { content: '\f0d5'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-github:before { content: '\f0e1'; } /* '' */
-.icon-up:before { content: '\f176'; } /* '' */
-
-/* CUSTOM RESETS
-================================================== */
-a {
-    transition: color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out;
+  color: var(--md-sys-color-primary); /* Update Icon Color to M3 */
 }
 
-a:focus,
-a:hover {
-    outline: 0 none;
-    text-decoration: none;
-}
+.icon-twitter:before { content: '\f099'; }
+.icon-facebook:before { content: '\f09a'; }
+.icon-gplus:before { content: '\f0d5'; }
+.icon-linkedin:before { content: '\f0e1'; }
+.icon-github:before { content: '\f0e1'; }
+.icon-up:before { content: '\f176'; }
 
-h4 {
-    font-size: 30px;
-}
-
-/* Buttons */ 
-.btn {
-    min-width: 145px;
-    line-height: 50px;
-    padding: 0 30px;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 0;
-    transition: box-shadow 0.25s ease-in-out;
-    -moz-transition: box-shadow 0.25s ease-in-out;
-    -webkit-transition: box-shadow 0.25s ease-in-out;
-    -o-transition: box-shadow 0.25s ease-in-out;
-    -ms-transition: box-shadow 0.25s ease-in-out;
-}
-
-.btn-fill {
-    color: #fff;
-    background-color: #212121;
-}
-
-.btn-border {
-    background-color: transparent;
-    color: #212121;
-    border: 1px solid #212121; 
-}
-
-.btn-fill:hover,
-.btn-fill:focus {
-    color: #fff;
-}
-
-.btn:hover,
-.btn:focus {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.15);
-}
-
-/* Input fields */
-.form-control {
-    padding-left: 10px;
-    border: 0;
-    border-bottom: 1px solid #212121;
-    border-radius: 0;
-    background-color: transparent; 
-    box-shadow: none;
-    outline: 0 none transparent;
-    -webkit-appearance:none;
- }
-
-textarea {
-    margin-top: 40px;
-    min-height: 200px;
-    resize: none;
-}
-
-.form-control:focus {
-    box-shadow: none;
-    border-bottom-color: #e1e1e1;
-}
-
-::-moz-placeholder,
-::-webkit-input-placeholder {
-    font-size: 16px;
-}
-
-/* LAYOUT
-================================================== */
+/* CUSTOM RESETS & M3 BASICS */
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-brand);
     font-size: 16px;
-    color: #212121;
+    background-color: var(--md-sys-color-background); /* M3 Dark BG */
+    color: var(--md-sys-color-on-surface); /* M3 Light Text */
+    line-height: 1.6;
 }
 
+a {
+    color: var(--md-sys-color-primary);
+    transition: all 0.25s ease-in-out;
+}
+
+a:focus, a:hover {
+    outline: 0 none;
+    text-decoration: none;
+    color: var(--md-sys-color-on-primary-container);
+    text-shadow: 0 0 10px rgba(208, 188, 255, 0.4);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--md-sys-color-on-surface);
+    font-weight: 400; /* M3 uses lighter weights for headings */
+}
+
+h4 { font-size: 28px; }
+
+/* M3 BUTTONS (Pill Shaped) */
+.btn, button {
+    min-width: 145px;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize; /* M3 is rarely uppercase */
+    border-radius: var(--md-sys-shape-corner-full); /* PILL SHAPE */
+    border: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    box-shadow: none;
+}
+
+/* Filled Button (Primary) */
+.btn-fill, button {
+    color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
+}
+
+/* Outlined Button */
+.btn-border {
+    background-color: transparent;
+    color: var(--md-sys-color-primary);
+    border: 1px solid var(--md-sys-color-outline);
+}
+
+.btn:hover, button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #EADDFF; /* Lighter on hover */
+    color: #141218;
+}
+
+/* FORMS (M3 Filled Inputs) */
+.form-control {
+    padding: 15px;
+    border: none;
+    border-bottom: 2px solid var(--md-sys-color-surface-variant);
+    border-radius: 8px 8px 0 0; /* Rounded top only */
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+    box-shadow: none;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    background-color: #55505C;
+    border-bottom-color: var(--md-sys-color-primary);
+}
+
+textarea {
+    margin-top: 20px;
+    min-height: 150px;
+    resize: none;
+}
+
+::-webkit-input-placeholder { color: var(--md-sys-color-on-surface-variant); }
+
+/* IMAGES */
 .img-res {
     display: block;
     width: 100vw;
     height: 100vh;
-    max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
 }
 
-.visible-xxs {
-    display: none;
-}
-
-/* Background-color */
-.gray-bg {
-    background-color: #e1e1e1;
-}
-
-/* HEADER
-================================================== */
+/* NAVIGATION (Floating Pill) */
 .site-header {
     position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 5;
+    top: 20px; /* Floating effect */
+    width: 90%;
+    left: 5%;
+    background-color: rgba(29, 27, 32, 0.9); /* Semi-transparent Surface */
+    border-radius: var(--md-sys-shape-corner-full);
+    z-index: 999;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-.site-logo img {
-    padding-bottom: 2px;
-}
+.site-logo img { height: 40px; }
 
-/* Navigation */
 .navbar-nav > li > a {
-    padding: 5px 0;
-    font-weight: 600;
-    color: #212121;
-    text-transform: uppercase;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.25s ease-in-out;
-    -moz-transition: border-color 0.25s ease-in-out;
-    -webkit-transition: border-color 0.25s ease-in-out;
-    -o-transition: border-color 0.25s ease-in-out;
-    -ms-transition: border-color 0.25s ease-in-out;
-}
-
-.navbar-nav.navbar-right {
-    margin-right: 0;
-}
-
-.navbar-nav > li + li > a {
-    margin-left: 40px;
+    padding: 8px 16px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface-variant);
+    text-transform: capitalize;
+    border-radius: var(--md-sys-shape-corner-full);
+    border: none;
 }
 
 .navbar-nav > li > a:hover,
-.navbar-nav > li.active > a,
-.nav > li > a:hover,
-.nav > li.active > a {
-    background-color: transparent;
-    border-bottom: 2px solid #212121;
+.navbar-nav > li.active > a {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border: none;
 }
 
-.nav > li > a:focus {
-    background-color: transparent;
-}
-
-/* HERO
-================================================== */
-.hero { 
-    background: url(../img/hero.jpg) no-repeat center / cover; 
-    height: 100%;
-    width: 100%;
+/* HERO SECTION */
+/* HERO SECTION */
+.hero {
+    /* Background with dark overlay */
+    background: linear-gradient(rgba(20, 18, 24, 0.7), rgba(20, 18, 24, 0.9)), url(../img/hero.jpg) no-repeat center / cover;
+    height: 100vh;
     min-height: 700px;
+
+    /* Flexbox to perfectly center everything */
+    display: flex;
+    align-items: center;     /* Vertical Center */
+    justify-content: center; /* Horizontal Center */
+    text-align: center;      /* Center the text itself */
+    padding: 0 20px;         /* Safety padding from edges */
 }
 
+/* This fixes the alignment issue */
 .hero .container {
+    width: 100%;
+    max-width: 900px; /* Keeps text from getting too wide */
     position: relative;
-    height: 100%;
-}
-
-.hero .col-md-6:first-child {
-    position: absolute;
-    top: 35%;
-    left: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    z-index: 2;
-}
-
-.hero .col-md-6:last-child {
-    position: absolute;
-    right: 0;
-    bottom: 0;
 }
 
 .hero h1 {
-    font-size: 46px;
+    font-size: 64px; /* Big bold M3 text */
     font-weight: 700;
     margin: 0 0 15px;
-    text-transform: uppercase;
+    color: var(--md-sys-color-on-surface);
+    letter-spacing: -2px;
 }
 
 .job-title {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 30px;
-    line-height: 1;
-} 
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+}
 
+/* OVERRIDE the old CSS that forced it to the left */
+.hero .col-md-6,
+.hero .col-md-6:first-child {
+    position: static !important; /* Removes 'left: 0' */
+    transform: none !important;  /* Removes old centering hacks */
+    width: 100%;                 /* Lets text take full width */
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* If you have a hero image, hide it on mobile, show centered on desktop if needed */
 .hero img {
-    height: 600px;
+    display: none; /* Hiding image to focus on your Name/Title cleanly */
 }
 
-/* SITEMAIN
-================================================== */
+/* =========================================
+   FIX HERO BUTTON SPACING
+   ========================================= */
+
+/* =========================================
+   FORCE HERO BUTTONS SIDE-BY-SIDE
+   ========================================= */
+
+.hero .btn {
+    display: inline-block !important; /* Stop them from being block elements */
+    width: auto !important;           /* Stop them from taking full width */
+    margin: 10px !important;          /* Add space all around */
+    min-width: 140px;                 /* Optional: Ensures they aren't too tiny */
+}
+
+.job-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--md-sys-color-primary); /* Accent color for title */
+}
+
+/* SITE SECTIONS */
 .site-main {
-    position: relative;
-    margin-bottom: 100px;
-    background-color: #fff;
-    z-index: 1;
-}
-/* site-section */
-.site-section {
-   padding-top: 120px;
+    background-color: var(--md-sys-color-background);
+    margin-bottom: 0;
 }
 
-.site-section h2,
-.site-section h3 {
-    font-size: 36px;
-    margin: 0;
-    text-transform: uppercase;
+.site-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Make every other section a "Card" style */
+.section-services, .section-portfolio {
+    background-color: var(--md-sys-color-surface);
+    border-radius: var(--md-sys-shape-corner-large);
+    margin: 20px; /* Floating card effect */
+    padding: 60px 20px;
+}
+
+.site-section h2 {
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
 }
 
 .img-lines {
-    margin: 15px 0 40px;
+    background-color: var(--md-sys-color-primary); /* Change orange line to purple */
+    height: 4px;
+    width: 60px;
+    margin: 10px auto 40px;
+    border-radius: 2px;
 }
 
-.site-section p {
-    margin-bottom: 35px;
-}
-
-/* Section: Skills */
-.section-skills {
-    padding-bottom: 120px;
-}
-
-.skill + .skill {
-    margin-top: 50px;
-}
-
-.skill h4 {
-    font-size: 24px;
-    text-transform: uppercase;
-    margin: 0 0 15px;
-}
+/* SKILLS (Chips) */
+.section-skills { padding-bottom: 80px; }
 
 .progress {
-    height: 15px;
-    margin-bottom: 0;
-    border-radius: 0;
-    background-color: #dfdfdf;
-    box-shadow: none;
+    height: 12px;
+    border-radius: 6px;
+    background-color: var(--md-sys-color-surface-variant);
 }
 
 .progress-bar {
-    background-color: #212121;  
+    background-color: var(--md-sys-color-primary);
+    border-radius: 6px;
 }
 
-/* Section: Services */
-.section-services {
-    position: relative;
-    padding-top: 220px;
+/* SERVICES */
+.service {
+    /* Turning service columns into M3 cards */
+    background-color: var(--md-sys-color-surface-variant);
+    padding: 30px;
+    border-radius: var(--md-sys-shape-corner-large);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
 }
 
-.section-services:before {
-    content: '';
-    background: url(../img/services-bg.jpg) no-repeat fixed center / cover;
-    width: 100%;
-    height: 400px; 
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.overlay:after {
-    content: '';
-    width: 100%;
-    height: 400px; 
-    position: absolute;
-    background-color: rgba(255,255,255,0.5);
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.section-services .container {
-    padding: 120px 100px;
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.service:hover {
+    transform: translateY(-5px);
+    background-color: #585360;
 }
 
 .service h4 {
-    margin: 25px 0;
-    font-size: 24px;
-    font-weight: 700;
+    margin: 20px 0;
+    color: var(--md-sys-color-primary);
 }
 
 .service p {
-    color: #000;
-    margin-bottom: 0;
+    color: var(--md-sys-color-on-surface-variant);
 }
 
-/* Section: Portfolio */
-.section-portfolio {
-    padding-bottom: 120px;
-}
-
+/* PORTFOLIO (Rounded Cards) */
 .portfolio-item {
     height: 280px;
     margin-bottom: 30px;
     position: relative;
-}
-
-
-.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-    margin-bottom: 0;
+    border-radius: var(--md-sys-shape-corner-large);
+    overflow: hidden; /* Important for rounded corners on images */
 }
 
 .portfolio-item:before {
@@ -379,292 +354,565 @@ html, body {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     z-index: 1;
-    transition: background-color 0.25s ease-in-out;
-    -moz-transition: background-color 0.25s ease-in-out;
-    -webkit-transition: background-color 0.25s ease-in-out;
-    -o-transition: background-color 0.25s ease-in-out;
-    -ms-transition: background-color 0.25s ease-in-out;
+    background-color: rgba(20, 18, 24, 0.4); /* Dark overlay default */
+    transition: all 0.3s;
 }
 
-.portfolio-item:hover:before{
-    background-color: rgba(33,33,33,0.6);
+.portfolio-item:hover:before {
+    /* Purple Tint Overlay on Hover */
+    background-color: rgba(79, 55, 139, 0.85);
 }
 
 .portfolio-item-info {
     position: absolute;
-    top: 150px;
-    left: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 999;
     opacity: 0;
-    transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
+    transition: all 0.3s;
 }
 
 .portfolio-item:hover .portfolio-item-info {
-    left: 50px;
     opacity: 1;
 }
 
 .portfolio-item-info h4 {
-    margin: 0 0 20px;
+    color: var(--md-sys-color-on-primary-container);
     font-weight: 700;
-    color: #fff;
 }
 
 .portfolio-item-info a {
-    padding: 6px 7px 4px;
-    font-size: 12px;
-    border: 1px solid #fff;
+    border: 1px solid var(--md-sys-color-on-primary-container);
     border-radius: 50px;
-    color: #fff;
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    color: var(--md-sys-color-on-primary-container);
 }
 
 .portfolio-item-info a:hover {
-    color: #212121;
-    background-color: #fff;
+    background-color: var(--md-sys-color-on-primary-container);
+    color: var(--md-sys-color-primary-container);
 }
 
-.section-portfolio .btn {
-    margin-top: 10px;
-}
-
-/* Modal */
-.modal {
-    z-index: 9999;
-}
-
+/* MODAL */
 .modal-content {
-    border-radius: 0;
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    border-radius: var(--md-sys-shape-corner-large);
 }
-
-.modal-header {
-    position: relative;
-    padding: 0;
-    height: 500px;
-}
-
 .modal-header .close {
-    position: absolute;
-    right: 0;
-    padding: 10px 11px;
-    margin-top: 0;
-    background-color: #fff;
-    font-size: 16px;
-    color: #212121;
-    border-left: 1px solid #212121;
-    border-bottom: 1px solid #212121;
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+    border-radius: 50%;
+    border: none;
     opacity: 1;
-    transition: box-shadow 0.25s ease-in-out;
-    -moz-transition: box-shadow 0.25s ease-in-out;
-    -webkit-transition: box-shadow 0.25s ease-in-out;
-    -o-transition: box-shadow 0.25s ease-in-out;
-    -ms-transition: box-shadow 0.25s ease-in-out;
 }
 
-.modal-header .close:hover {
-    box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.2);
-}
-
-.modal-body h4 {
-    font-weight: 700;
-}
-
-.modal-footer {
-    text-align: center;
-}
-
-/* Section: Counters */
+/* COUNTERS */
 .section-counters {
-    background: url(../img/counters-bg.jpg) no-repeat fixed center / cover;
-    width: 100%;
-    padding: 100px 0;
-    position: relative;
+    background: linear-gradient(rgba(79, 55, 139, 0.8), rgba(20, 18, 24, 0.9)), url(../img/counters-bg.jpg) center / cover fixed;
+}
+.site-section p.counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Ultra thin M3 look */
+    color: var(--md-sys-color-primary);
 }
 
-.section-counters:before {
-    content: '';
+/* FOOTER */
+.site-footer {
+    background-color: var(--md-sys-color-surface);
+    padding: 40px 0;
+    border-top: 1px solid var(--md-sys-color-surface-variant);
+}
+
+.icons { color: var(--md-sys-color-on-surface-variant); font-size: 20px; margin: 0 10px;}
+.icons:hover { color: var(--md-sys-color-primary); }
+
+.copyright { color: var(--md-sys-color-on-surface-variant); }
+
+/* Overrides for specific classes used in HTML */
+.white { background: var(--md-sys-color-surface); }
+.text-white { color: var(--md-sys-color-on-surface) !important; }
+.gray-bg { background-color: var(--md-sys-color-background); } /* Remove gray, make it dark */
+.text-gray { color: var(--md-sys-color-on-surface-variant); }
+
+/* Remove old orange fade and replace with Primary gradient */
+.orange-fade {
+    background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0, var(--md-sys-color-primary) 100%);
+}
+
+/* =========================================
+   FIX FOR MISSING IMAGES
+   ========================================= */
+
+/* 1. Reset the global responsive image class */
+.img-res {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 2. Target the Hero Image specifically for full screen */
+/* Only the image inside the Hero section should be full screen */
+.hero .img-res,
+.hero > img {
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
+}
+
+/* 3. Force Project Images to fit inside their cards */
+.portfolio-item img,
+.work-history img,
+.service img {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    object-fit: cover; /* Ensures they don't stretch weirdly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensures they sit behind text/overlays */
 }
 
-.section-counters h4 {
-    color: #fff;
-    margin: 25px 0 0;
+/* 4. Ensure the card handles the image correctly */
+.portfolio-item {
+    position: relative;
+    overflow: hidden; /* Crops the image if it's too big */
 }
+
+/* =========================================
+   FIX FOR SERVICE ICONS (What I can do)
+   ========================================= */
+
+/* Target images specifically inside the service/skills section */
+.section-services .service img,
+.service-box img {
+    width: 64px !important;  /* Force icon size */
+    height: 64px !important; /* Force icon size */
+    position: relative !important; /* Stop them from floating behind text */
+    object-fit: contain !important; /* Don't crop the icon */
+    margin-bottom: 20px;     /* Space between icon and text */
+    display: inline-block;   /* Allows centering */
+}
+
+/* Ensure the service card centers the icon */
+.service, .service-box {
+    text-align: center;      /* Centers the icon horizontally */
+}
+
+/* =========================================
+   FINAL FOOTER ALIGNMENT FIX
+   ========================================= */
+
+.site-footer {
+    position: relative !important;
+    padding: 30px 0; /* Give the footer some height */
+}
+
+/* 1. KEY FIX: Force Bootstrap columns to NOT trap the absolute text */
+.site-footer .row,
+.site-footer [class*="col-"] {
+    position: static !important;
+}
+
+/* 2. Position the copyright relative to the WHOLE footer */
+.copyright {
+    position: absolute !important;
+    left: 50%;
+    top: 50%;
+
+    /* This centers it perfectly based on its own height */
+    transform: translate(-50%, -50%);
+
+    /* --- THE NUDGE KNOB --- */
+    /* Negative numbers move it UP. Positive numbers move it DOWN. */
+    margin-top: -3px;
+    /* ---------------------- */
+
+    width: auto;
+    white-space: nowrap;
+    z-index: 100;
+    margin-bottom: 0 !important;
+}
+
+/* Keep social icons left and arrow right */
+.site-footer .col-md-6:first-child { text-align: left !important; }
+.site-footer .col-md-6:last-child { text-align: right !important; }
+
+/* Mobile Reset */
+@media (max-width: 767px) {
+    .site-footer [class*="col-"] { position: relative !important; text-align: center !important; }
+    .copyright {
+        position: relative !important;
+        top: auto; left: auto;
+        transform: none;
+        margin-top: 15px;
+        display: block;
+    }
+}
+
+/* =========================================
+   FIX PROJECT HOVER ICONS
+   ========================================= */
+
+.portfolio-item-info a {
+    /* 1. Make the icon bigger */
+    font-size: 20px !important;
+
+    /* 2. Increase the circle size around it */
+    padding: 12px 14px !important;
+
+    /* 3. Add distance between the Eye and Link icons */
+    margin: 0 10px !important;
+
+    /* Optional: Ensure they look perfectly round */
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* =========================================
+   FIX LIVE COUNTER SIZE
+   ========================================= */
 
 .site-section p.counter {
-    font-size: 100px;
-    font-weight: 300;
-    color: #fff;
-    margin: 0;
-    line-height: 0.8;
+    font-size: 80px !important;  /* Much bigger text */
+    font-weight: 700 !important; /* Bold instead of thin */
+    color: var(--md-sys-color-primary) !important; /* Make them pop with the theme color */
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 
-/* Section: Form*/
-.section-form {
-    padding-bottom: 120px;
+/* Optional: Make the label text below the number clear too */
+.site-section h4 {
+    font-size: 20px !important;
+    color: var(--md-sys-color-on-surface) !important;
+    margin-top: 0;
 }
 
-.section-form .btn {
-    margin-top: 40px;
+/* =========================================
+   UNIVERSAL HOVER FIX (ADAPTS TO ANY THEME)
+   ========================================= */
+
+/* 1. Project Images: Use the Theme's Primary Color with opacity */
+.portfolio-item:hover:before {
+    /* This creates a semi-transparent overlay using your chosen PRIMARY color */
+    background-color: var(--md-sys-color-primary-container) !important;
+    opacity: 0.9;
 }
 
-/* FOOTER
-================================================== */
-.site-footer {
-    bottom: 0;
-    padding: 30px 0;
-    width: 100%;
-    background-color: #212121;
-    z-index: -1;
+/* 2. Cards: Lighten the background slightly on hover */
+.service:hover,
+.card:hover,
+.service-box:hover {
+    background-color: var(--md-sys-color-surface-variant) !important;
+    border-color: var(--md-sys-color-primary) !important;
 }
 
-
-
-
-.site-footer a {
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+/* 3. Text Selection: Ensure highlighting text doesn't show purple */
+::selection {
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
 }
 
-a.twitter-bg:hover {color: #55acee;}
-a.facebook-bg:hover{color: #3b5998;}
-a.gplus-bg:hover{color: #007bb5;} 
-a.linkedin-bg:hover {color: #dd4b39;}
-a.github-bg:hover {color: #dd4b39;}
-a.icon-up-bg:hover {color: #fff;}
+/* =========================================
+   THE "DEV TERMINAL" FONT UPDATE
+   ========================================= */
 
-.copyright {
-    margin-bottom: 0;
-    line-height: 40px;
-    color: #fff;
-    text-align: center;
-    font-size: 10px;
+/* 1. Make HEADERS big, thick, and geometric */
+h1, h2, h3, h4, .hero h1, .navbar-brand {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important; /* Extra Bold */
+    text-transform: uppercase;   /* Make it scream "Header" */
+    letter-spacing: -1px;
 }
 
-button {
-  background-color: #c1c4c1; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+/* 2. Make the ABOUT TEXT look like code */
+#about p,
+.section-about p,
+.portfolio-item-info p {
+    font-family: 'Fira Code', monospace !important;
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+    color: var(--md-sys-color-on-surface-variant) !important; /* Code comment grey */
 }
 
-button:hover {
-  background-color: black;
+/* 3. Make the Buttons look like command line inputs */
+.btn, button {
+    font-family: 'Fira Code', monospace !important;
+    font-weight: 700 !important;
+    letter-spacing: 0px;
+    text-transform: none !important; /* Lowercase looks more like code */
 }
 
-.icons{
-    
-    color: white;
-     
-   
+/* =========================================
+   FIX FOR DASH LINE (HIDES OLD SVG)
+   ========================================= */
+
+.img-lines {
+    /* 1. Reset the element to be a simple box */
+    display: block !important;
+    box-sizing: border-box !important;
+
+    /* 2. Hide the original black image */
+    height: 0 !important;        /* Collapse content height */
+    padding-top: 5px !important; /* Use padding to create the line thickness */
+    overflow: hidden !important; /* Cut off anything that sticks out */
+
+    /* 3. Apply the New Theme Color */
+    background-color: var(--md-sys-color-primary) !important;
+
+    /* 4. Sizing and Spacing */
+    width: 60px !important;
+    margin-top: 25px !important;    /* Gap above (fix collision) */
+    margin-bottom: 50px !important; /* Gap below (fix collision) */
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    /* 5. Rounded corners */
+    border-radius: 10px;
+    border: none !important;
 }
 
-.icons:hover{
-color: #2154c7;
-}
+/* =========================================
+   CLASSY TEXT LOGO (MATCHES HEADERS)
+   ========================================= */
 
+.text-logo {
+    /* 1. Use the Header Font (Montserrat) */
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important; /* Extra Bold */
+    text-transform: uppercase;   /* Classy/Corporate look */
+    letter-spacing: -1px;        /* Tight tracking like a startup logo */
 
+    /* 2. Maximize Size */
+    font-size: 24px !important;  /* Adjust this number to fill the space */
 
+    /* 3. Color matching your theme */
+    color: var(--md-sys-color-on-surface) !important;
 
-
-
-/* Scss Document */
-.orange-fade {
-    background: #ff910e;
-    background: linear-gradient(135deg,#ff910e 0,#ffa841 100%);
-}
-.pos-r {
-    position: relative!important;
-}
-.white {
-    background: #fff;
-}
-.text-white {
-    color: #fff!important;
-}
-.text-gray {
-    color: #363636;
-}
-.testimonial {
+    /* 4. Force Vertical Alignment (Fill the bar) */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    height: 100%;       /* Take full height of the parent */
+    padding: 15px 15px; /* Adjust padding to fit */
+    margin: 0;
+    line-height: 1;
+}
+
+.text-logo:hover {
+    color: var(--md-sys-color-primary) !important; /* Glow on hover */
+}
+
+/* 5. Mobile Adjustment */
+@media (max-width: 767px) {
+    .text-logo {
+        font-size: 20px !important; /* Slightly smaller on phones */
+    }
+}
+
+/* =========================================
+   ADJUSTED NAVBAR HEIGHT (64px)
+   ========================================= */
+
+.site-header {
+    display: block !important;
+    width: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9999 !important;
+    padding: 0 !important;
+
+    background-color: var(--md-sys-color-background) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3) !important;
+
+    /* Increased from 50px to 64px */
+    min-height: 64px !important;
+}
+
+/* Adjust LOGO height */
+.navbar-brand {
+    height: 64px !important;
+    line-height: 64px !important;
+    padding: 0 15px !important;
+    display: flex;
     align-items: center;
 }
-.separator {
-    width: 14%;
-    height: 3px;
-    margin: 1.2em auto 1em;
-    background: #ffc53a;
+
+/* Adjust LINK heights */
+.navbar-nav > li > a {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    /* Match the new header height so text centers vertically */
+    line-height: 64px !important;
+    height: 64px !important;
 }
-.one-slide {
-  border-radius: 3px;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 1.1rem;
-  height: 300px;
+
+/* =========================================
+   RESTORED: CENTERED HERO AVATAR
+   ========================================= */
+
+.hero-avatar {
+    display: block !important;
+    text-align: center;
+    margin: 0 auto 25px auto; /* Center horizontal + space below */
+    position: relative;
+    z-index: 100 !important;
 }
-.one-slide img {
-  width: 60%;
+
+.my-avatar {
+    width: 160px !important;
+    height: 160px !important;
+    display: inline-block !important;
+
+    /* Styling */
+    border-radius: 50% !important;
+    border: 4px solid var(--md-sys-color-primary) !important;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    object-fit: cover;
+
+    /* Animation (Optional) */
+    transition: transform 0.3s ease;
 }
-.carousel-controls .control {
-  position: absolute;
-  cursor: pointer;
-  top: 56.4%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  c
+
+.my-avatar:hover {
+    transform: scale(1.05);
+    border-color: #fff !important;
 }
-.prev {
-  left: -1.875rem;
+
+/* =========================================
+   FIX JOB TITLE FONT
+   ========================================= */
+
+.job-title {
+    /* 1. Force the Code Font */
+    font-family: 'Fira Code', monospace !important;
+
+    /* 2. Styling adjustments */
+    font-weight: 500 !important;  /* Medium weight */
+    letter-spacing: -0.5px;       /* Slightly tighter for code look */
+    font-size: 20px !important;   /* Ensure readability */
+
+    /* 3. Color (Optional: Make it pop with your Theme Color) */
+    color: var(--md-sys-color-primary) !important;
+
+    /* 4. Remove any old margins that might look weird */
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: block;
 }
-.next {
-  right: -1.875rem;
+
+/* =========================================
+   FORCE SCROLL UP ICON (NO FONT REQUIRED)
+   ========================================= */
+
+.icon-up {
+    /* 1. Reset font to standard system font so the arrow definitely shows */
+    font-family: Arial, sans-serif !important;
+    text-decoration: none !important;
+
+    /* 2. Create the Button Circle */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--md-sys-color-primary) !important;
+    border-radius: 50%;
+
+    /* 3. Button Shadow */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
 }
-.testimonial-carousel { 
-  &.slick-initialized { 
-    display: block; 
-  }
- .message {
-    width: 100%;
-    font-size: .9rem;
-  }
-  .brand {
-    width: 100%;
-  }
-  @media (max-width: 575px) {
-    .one-slide {
-	    height: 200px;
-	  }
-    img {
-  	    width: 40%;
-  	  }
-  }
+
+/* 4. The Magic: Replace the broken icon code with a real Arrow */
+.icon-up:before {
+    content: "▲" !important;  /* Standard Up Arrow Character */
+    font-size: 24px !important;
+    color: var(--md-sys-color-on-primary) !important; /* Text color */
+    margin: 0 !important;
+    line-height: 1 !important;
 }
+
+/* Hover Effect */
+.icon-up:hover {
+    transform: translateY(-5px);
+    background-color: var(--md-sys-color-on-surface) !important;
+}
+.icon-up:hover:before {
+    color: var(--md-sys-color-surface) !important;
+}
+
+/* =========================================
+   SCROLL BUTTON - ALIGNED RIGHT
+   ========================================= */
+
+.scroll-top-btn {
+    /* 1. Layout */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    /* 2. Positioning (Snap to Right) */
+    position: absolute !important;
+    right: 15px !important; /* Distance from the right edge */
+    top: 50%;
+
+    /* 3. Vertical Centering (Without using Transform) */
+    /* Since height is 50px, -25px pulls it up to perfect center */
+    margin-top: -25px !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    /* 4. Style */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+/* Hover Effect (Bouncing) */
+.scroll-top-btn:hover {
+    transform: translateY(-5px); /* This won't break the centering now */
+    background-color: var(--md-sys-color-on-surface) !important;
+    color: var(--md-sys-color-surface) !important;
+}
+
+.scroll-top-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Mobile Fix: Reset to center or keep right? */
+/* Usually on mobile, keep it right or bottom-right fixed */
+@media (max-width: 767px) {
+    .scroll-top-btn {
+        position: relative !important; /* Stop floating absolute on mobile */
+        right: auto !important;
+        top: auto !important;
+        margin: 20px auto 0 auto !important; /* Center it below text */
+        display: flex !important;
+    }
+}
+/* =========================================
+   ENABLE SMOOTH SCROLLING
+   ========================================= */
+
+html {
+    scroll-behavior: smooth !important;
+}
+
