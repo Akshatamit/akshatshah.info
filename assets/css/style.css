@@ -964,3 +964,139 @@ iframe,
     /* 3. Optional: Add a subtle border to define the edge on dark backgrounds */
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* =========================================
+   FIX ARCHIVE MODAL HEADING
+   ========================================= */
+
+#academicArchiveModal .modal-title {
+    /* 1. Prevent overlapping with the Close 'X' button */
+    padding-right: 30px !important;
+
+    /* 2. Allow text to wrap nicely */
+    white-space: normal !important;
+    line-height: 1.4 !important;
+
+    /* 3. Adjust size slightly so it fits better */
+    font-size: 22px !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Ensure the header container expands to fit the text */
+#academicArchiveModal .modal-header {
+    height: auto !important;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================================
+   FIX MODAL CUT-OFF (Z-INDEX & SPACING)
+   ========================================= */
+
+/* 1. Force the Modal to sit ON TOP of the Navbar */
+.modal {
+    /* Navbar is 9999, so this must be higher */
+    z-index: 10001 !important;
+}
+
+/* 2. Ensure the dark background overlay covers the Navbar too */
+.modal-backdrop {
+    z-index: 10000 !important;
+}
+
+/* 3. Push the modal down so it doesn't hug the top edge */
+.modal-dialog {
+    /* Clears the header area + adds breathing room */
+    margin-top: 80px !important;
+    margin-bottom: 50px !important;
+}
+
+/* =========================================
+   FIX MODAL CLOSE BUTTON (THE 'X')
+   ========================================= */
+
+/* =========================================
+   PERFECTLY ALIGNED CLOSE BUTTON
+   ========================================= */
+
+.modal-header {
+    position: relative !important; /* Needed for the button to stick to it */
+}
+
+/* =========================================
+   CLOSE BUTTON - CLOSER TO RIGHT EDGE
+   ========================================= */
+
+.modal-header .close {
+    position: absolute !important;
+
+    /* Moved closer to the edge (was 20px) */
+    right: 10px !important;
+
+    /* Keep Vertical Center */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    /* Style */
+    font-size: 32px !important;
+    line-height: 1 !important;
+    color: var(--md-sys-color-on-surface) !important;
+    opacity: 0.7 !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1060 !important;
+}
+
+/* Maintain Hover Effect */
+.modal-header .close:hover {
+    color: var(--md-sys-color-primary) !important;
+    opacity: 1 !important;
+    transform: translateY(-50%) rotate(90deg) !important;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   ARCHIVE CLOSE BUTTON - VERTICALLY CENTERED
+   ========================================= */
+
+#academicArchiveModal .modal-header .close {
+    /* 1. Positioning: Lock to vertical center */
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important; /* This centers it perfectly */
+    right: 20px !important;
+
+    /* 2. Reset Styles (No Background/Oval) */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    /* 3. Text Style */
+    font-size: 36px !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    color: var(--md-sys-color-on-surface) !important;
+    opacity: 0.7 !important;
+
+    /* 4. Reset Dimensions */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Hover Effect: We must include the centering transform AND the rotation */
+#academicArchiveModal .modal-header .close:hover {
+    color: var(--md-sys-color-primary) !important;
+    /* Maintain vertical center while spinning */
+    transform: translateY(-50%) rotate(90deg) !important;
+    background: transparent !important;
+    opacity: 1 !important;
+}
