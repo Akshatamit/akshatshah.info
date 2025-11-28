@@ -1100,3 +1100,33 @@ iframe,
     background: transparent !important;
     opacity: 1 !important;
 }
+
+/* =========================================
+   FIX MODAL HEADER (FLEXBOX LAYOUT)
+   ========================================= */
+
+#academicArchiveModal .modal-header {
+    display: flex !important;
+    align-items: center !important; /* Center vertically */
+    justify-content: space-between !important; /* Push title left, X right */
+    flex-wrap: nowrap !important; /* Prevent weird breaking */
+    height: auto !important;
+    min-height: 60px !important;
+    padding: 15px 20px !important;
+}
+
+#academicArchiveModal .modal-title {
+    flex-grow: 1 !important; /* Take up all available space */
+    white-space: normal !important; /* Allow wrapping */
+    padding-right: 20px !important; /* Safety gap from the X */
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+/* Ensure the Close button doesn't shrink */
+#academicArchiveModal .modal-header .close {
+    flex-shrink: 0 !important; /* Don't get squished */
+    position: static !important; /* Let Flexbox handle position */
+    margin: 0 !important;
+}
