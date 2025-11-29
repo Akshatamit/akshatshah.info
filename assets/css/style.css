@@ -1130,3 +1130,129 @@ iframe,
     position: static !important; /* Let Flexbox handle position */
     margin: 0 !important;
 }
+
+/* =========================================
+   FIX ARCHIVE BUTTON (SNAP TO RIGHT)
+   ========================================= */
+
+#academicArchiveModal .modal-header .close {
+    /* 1. Force it out of the Flexbox flow */
+    position: absolute !important;
+
+    /* 2. Pin it to the Right */
+    right: 20px !important;
+
+    /* 3. Center it Vertically */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    /* 4. Reset Styles */
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    /* 5. Text Style */
+    font-size: 36px !important;
+    font-weight: 300 !important;
+    line-height: 1 !important;
+    color: var(--md-sys-color-on-surface) !important;
+    opacity: 0.7 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure the title leaves space for the button so they don't overlap */
+#academicArchiveModal .modal-title {
+    padding-right: 40px !important; /* Safety gap */
+}
+
+/* =========================================
+   GLOBAL ROUNDED CORNERS (ALL IMAGES)
+   ========================================= */
+
+/* 1. Apply soft curves to ALL general images */
+/* This targets Projects, Work History logos, Service icons, etc. */
+img,
+.img-res,
+.portfolio-item img,
+.service img {
+    border-radius: 16px !important; /* Standard M3 curve */
+}
+
+/* 2. SPECIAL CASE: Popup/Modal Headers */
+/* These usually only need rounding on the TOP corners to fit the box */
+.modal-header img {
+    border-radius: 16px 16px 0 0 !important;
+}
+
+/* 3. SPECIAL CASE: Your Hero Avatar */
+/* We must override the global rule to keep this a perfect circle */
+.my-avatar,
+.hero-avatar img {
+    border-radius: 50% !important;
+}
+
+/* =========================================
+   FIX FEATURED PROJECTS ON MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    /* 1. Prevent "Zoom Out" / Overflow */
+    .section-portfolio .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .section-portfolio .col-xs-12 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* 2. THE UX FIX: Stop using 'Hover' to see text */
+    /* Instead, move the text block BELOW the image */
+    .portfolio-item-info {
+        position: relative !important; /* Stop floating on top of image */
+        top: auto !important;
+        left: auto !important;
+        opacity: 1 !important; /* Make it ALWAYS visible */
+        visibility: visible !important;
+
+        /* Style it as the card footer */
+        background-color: var(--md-sys-color-surface) !important;
+        width: 100% !important;
+        padding: 20px !important;
+        border-radius: 0 0 16px 16px !important; /* Round bottom corners */
+        border: 1px solid var(--md-sys-color-outline) !important;
+        border-top: none !important;
+
+        /* Reset transforms */
+        transform: none !important;
+        text-align: center !important;
+    }
+
+    /* 3. Style the Image as the card header */
+    .portfolio-item img {
+        position: relative !important;
+        width: 100% !important;
+        height: 200px !important; /* Fix height for consistency */
+        object-fit: cover !important;
+        border-radius: 16px 16px 0 0 !important; /* Round top corners only */
+    }
+
+    /* 4. Ensure the container has no weird borders */
+    .portfolio-item {
+        border: none !important;
+        background: transparent !important;
+        overflow: visible !important; /* Let content stack */
+        height: auto !important;
+    }
+
+    /* 5. Make the Buttons/Icons bigger/easier to tap */
+    .portfolio-item-info a {
+        display: inline-block !important;
+        margin: 10px 15px 0 15px !important;
+        padding: 10px !important;
+        background-color: var(--md-sys-color-surface-variant) !important
