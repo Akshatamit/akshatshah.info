@@ -1224,3 +1224,35 @@ img,
         max-width: 90% !important; /* Keep cards smaller than screen */
     }
 }
+
+/* =========================================
+   FIX WORK HISTORY OVERFLOW (MOBILE ONLY)
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    /* Target the Work History section explicitly */
+    #portfolio .container {
+        width: 100% !important;
+        padding-left: 20px !important;  /* Add safety buffer on left */
+        padding-right: 20px !important; /* Add safety buffer on right */
+        overflow-x: hidden !important;  /* Cut off any rogue pixels */
+    }
+
+    /* Force the headings inside Work History to wrap */
+    #portfolio h3,
+    #portfolio h4 {
+        white-space: normal !important;
+        word-wrap: break-word !important; /* Break long words if necessary */
+        font-size: 24px !important;       /* Slightly smaller for mobile */
+        line-height: 1.3 !important;
+        max-width: 100% !important;
+    }
+
+    /* Ensure the cards inside don't push the width out */
+    #portfolio .portfolio-item {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90% !important; /* Keep cards smaller than screen */
+    }
+}
