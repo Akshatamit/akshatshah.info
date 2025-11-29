@@ -1194,65 +1194,33 @@ img,
 }
 
 /* =========================================
-   FIX FEATURED PROJECTS ON MOBILE
+   FIX WORK HISTORY OVERFLOW (MOBILE ONLY)
    ========================================= */
 
 @media (max-width: 767px) {
 
-    /* 1. Prevent "Zoom Out" / Overflow */
-    .section-portfolio .row {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .section-portfolio .col-xs-12 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-bottom: 30px !important;
-    }
-
-    /* 2. THE UX FIX: Stop using 'Hover' to see text */
-    /* Instead, move the text block BELOW the image */
-    .portfolio-item-info {
-        position: relative !important; /* Stop floating on top of image */
-        top: auto !important;
-        left: auto !important;
-        opacity: 1 !important; /* Make it ALWAYS visible */
-        visibility: visible !important;
-
-        /* Style it as the card footer */
-        background-color: var(--md-sys-color-surface) !important;
+    /* Target the Work History section explicitly */
+    #portfolio .container {
         width: 100% !important;
-        padding: 20px !important;
-        border-radius: 0 0 16px 16px !important; /* Round bottom corners */
-        border: 1px solid var(--md-sys-color-outline) !important;
-        border-top: none !important;
-
-        /* Reset transforms */
-        transform: none !important;
-        text-align: center !important;
+        padding-left: 20px !important;  /* Add safety buffer on left */
+        padding-right: 20px !important; /* Add safety buffer on right */
+        overflow-x: hidden !important;  /* Cut off any rogue pixels */
     }
 
-    /* 3. Style the Image as the card header */
-    .portfolio-item img {
-        position: relative !important;
-        width: 100% !important;
-        height: 200px !important; /* Fix height for consistency */
-        object-fit: cover !important;
-        border-radius: 16px 16px 0 0 !important; /* Round top corners only */
+    /* Force the headings inside Work History to wrap */
+    #portfolio h3,
+    #portfolio h4 {
+        white-space: normal !important;
+        word-wrap: break-word !important; /* Break long words if necessary */
+        font-size: 24px !important;       /* Slightly smaller for mobile */
+        line-height: 1.3 !important;
+        max-width: 100% !important;
     }
 
-    /* 4. Ensure the container has no weird borders */
-    .portfolio-item {
-        border: none !important;
-        background: transparent !important;
-        overflow: visible !important; /* Let content stack */
-        height: auto !important;
+    /* Ensure the cards inside don't push the width out */
+    #portfolio .portfolio-item {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90% !important; /* Keep cards smaller than screen */
     }
-
-    /* 5. Make the Buttons/Icons bigger/easier to tap */
-    .portfolio-item-info a {
-        display: inline-block !important;
-        margin: 10px 15px 0 15px !important;
-        padding: 10px !important;
-        background-color: var(--md-sys-color-surface-variant) !important
+}
