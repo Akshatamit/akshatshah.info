@@ -1193,3 +1193,177 @@ img,
     border-radius: 50% !important;
 }
 
+/* =========================================
+   New "Skills(Technical Capabilities)" section
+   ========================================= */
+<style>
+    /* Darken the entire section safely */
+    #engineering-specs {
+        background-color: #0d1117;
+        padding: 80px 0;
+    }
+
+    /* Fix the header text and lines for the dark background */
+    #engineering-specs .dark-header {
+        color: #c9d1d9;
+    }
+    #engineering-specs .lines-inverted {
+        filter: invert(0.8);
+    }
+
+    .spec-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    /* The dark cards */
+    .spec-block {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        padding: 30px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Highlight for your 100M record win */
+    .spec-block.accent {
+        border-left: 4px solid #58a6ff;
+        background-color: #1c2128;
+    }
+
+    .spec-block:hover {
+        transform: translateX(10px);
+        border-color: #58a6ff;
+    }
+
+    .spec-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .spec-code {
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        color: #8b949e;
+        font-size: 14px;
+    }
+
+    .spec-block h4 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #f0f6fc;
+    }
+
+    .spec-block p {
+        font-size: 16px;
+        color: #8b949e;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .spec-block p strong {
+        color: #c9d1d9;
+    }
+
+    .spec-footer {
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        color: #58a6ff;
+        background-color: rgba(88, 166, 255, 0.1);
+        padding: 5px 12px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+</style>
+
+/* =========================================
+   New "What Can I Do" section
+   ========================================= */
+<style>
+    /* Dark Section Background */
+    #what-i-do.dark-section {
+        background-color: #0d1117;
+        padding: 80px 0;
+        border-top: 1px solid #30363d; /* Separator from the previous section */
+    }
+
+    #what-i-do .dark-header {
+        color: #f0f6fc;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    #what-i-do .dark-subtitle {
+        color: #8b949e;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    #what-i-do .lines-inverted {
+        filter: invert(0.8);
+    }
+
+    /* Grid Layout for Services */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    /* Service Card Styling */
+    .service-card {
+        background-color: #161b22;
+        border: 1px solid #30363d;
+        padding: 40px 30px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        position: relative;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        border-color: #58a6ff;
+    }
+
+    .service-number {
+        font-size: 48px;
+        font-weight: 900;
+        color: rgba(88, 166, 255, 0.1); /* Faint blue number in the background */
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        line-height: 1;
+    }
+
+    .service-card h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #f0f6fc;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-card p {
+        font-size: 15px;
+        color: #8b949e;
+        line-height: 1.7;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Mobile Responsive: Stack into 1 column */
+    @media (max-width: 768px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
